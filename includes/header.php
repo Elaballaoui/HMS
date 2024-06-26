@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="icon" href="img/hospital-logo.png" />
-    <title>eDoc</title>
+    <title>eHospital</title>
     <style>
         table {
             animation: transitionIn-Y-bottom 0.5s;
