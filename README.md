@@ -1,4 +1,4 @@
-"# eHospital" 
+## "# eHospital PHP management system" 
 
 ## Admin account:
 email: admin@edoc.com <br/>
