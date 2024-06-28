@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="assets/css/animations.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/signup.css">
     <link rel="icon" href="img/hospital-logo.png" />
     <title>eHospital</title>
     <style>

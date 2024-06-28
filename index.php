@@ -19,13 +19,11 @@ include_once 'includes/header.php';
                 </a>
             </td>
         </tr>
-
         <tr>
             <td colspan="3">
                 <p class="heading-text">Évitez les tracas et les retards .</p>
             </td>
         </tr>
-
         <tr>
             <td colspan="3">
                 <p class="sub-text2">
@@ -38,7 +36,6 @@ include_once 'includes/header.php';
                 </p>
             </td>
         </tr>
-        
         <tr>
             <td colspan="3">
                 <center>
@@ -48,7 +45,6 @@ include_once 'includes/header.php';
                 </center>
             </td>
         </tr>
-        
         <tr>
             <td colspan="3"></td>
         </tr>
