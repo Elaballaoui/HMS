@@ -1,3 +1,7 @@
+<?php
+global $cssLink;
+global $pageTitle;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/animations.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="assets/css/signup.css">
+    <link rel="stylesheet" href=<?php echo $cssLink ?> />
     <link rel="icon" href="img/hospital-logo.png" />
-    <title>eHospital</title>
+    <title>eHospital | <?php echo $pageTitle ?></title>
     <style>
         table {
             animation: transitionIn-Y-bottom 0.5s;

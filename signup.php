@@ -1,4 +1,6 @@
 <?php
+$cssLink="assets/css/signup.css";
+$pageTitle="Inscrire";
 include_once 'includes/header.php';
 //learn from w3schools.com
 //Unset all the server side variables

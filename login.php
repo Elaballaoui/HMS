@@ -1,4 +1,6 @@
 <?php
+$cssLink="assets/css/login.css";
+$pageTitle="Connecter";
 include_once 'includes/header.php';
 //learn from w3schools.com
 //Unset all the server side variables

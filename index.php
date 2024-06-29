@@ -1,6 +1,9 @@
 <?php
+$cssLink="assets/css/index.css";
+$pageTitle="Accueil";
 include_once 'includes/header.php';
 ?>
+
 <div class="full-height">
     <table border="0">
         <tr>
