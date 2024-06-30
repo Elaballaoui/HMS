@@ -1,10 +1,8 @@
 <?php
-$pageTitle="Tableau de bord";
-include_once '../includes/patientHeader.php';
+    $pageTitle="Tableau de bord";
+    include_once '../includes/patientHeader.php';
 ?>
 <?php
-    //learn from w3schools.com
-
     session_start();
 
     if(isset($_SESSION["user"])){
@@ -90,7 +88,7 @@ include_once '../includes/patientHeader.php';
                                         echo "<option value='$d'><br/>";
                                     };
     
-                                echo ' </datalist>';
+                                    echo '</datalist>';
                                 ?>
                                 <input type="Submit" value="Recherche" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
                             <br>
