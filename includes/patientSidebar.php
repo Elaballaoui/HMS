@@ -1,5 +1,5 @@
 <?php
-global$username;
+global $username;
 ?>
 <div class="menu">
     <table class="menu-container" border="0">
