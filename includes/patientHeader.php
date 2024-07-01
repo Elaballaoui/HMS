@@ -1,4 +1,8 @@
-<?php global $pageTitle ?>
+<?php
+    global $cssLink;
+    global $pageTitle;
+    global $cssStyle;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,22 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/animations.css">
     <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href=<?php echo $cssLink ?> />
     <link rel="icon" href="../assets/img/hospital-logo.png">
     <title>eHospital | <?php echo $pageTitle ?></title>
     <style>
-        .dashbord-tables{
-            animation: transitionIn-Y-over 0.5s;
-        }
-        .filter-container{
-            animation: transitionIn-Y-bottom  0.5s;
-        }
-        .sub-table,.anime{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
-        .popup{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
+        <?php echo $cssStyle; ?>
     </style>
 </head>
 <body>

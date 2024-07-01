@@ -1,28 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/animations.css">  
-    <link rel="stylesheet" href="../css/main.css">  
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="icon" href="../img/hospital-logo.png">
-    <title>Réservations</title>
-    <style>
-        .popup{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
-        .sub-table{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
-</style>
-</head>
-<body>
-    <?php
-
-    //learn from w3schools.com
-
+<?php
+    $cssLink="../assets/css/admin.css";
+    $pageTitle="Mes Réservations";
+    $cssStyle=".popup{
+                animation: transitionIn-Y-bottom 0.5s;
+            }
+            .sub-table{
+                animation: transitionIn-Y-bottom 0.5s;
+            }";
+    include_once '../includes/patientHeader.php';
+    ?>
+<?php
     session_start();
 
     if(isset($_SESSION["user"])){
@@ -31,14 +18,12 @@
         }else{
             $useremail=$_SESSION["user"];
         }
-
     }else{
         header("location: ../login.php");
     }
-    
 
     //import database
-    include("../connection.php");
+    include("../includes/connection.php");
     $sqlmain= "select * from patient where pemail=?";
     $stmt = $database->prepare($sqlmain);
     $stmt->bind_param("s",$useremail);
@@ -48,86 +33,25 @@
     $userid= $userfetch["pid"];
     $username=$userfetch["pname"];
 
-
     //echo $userid;
     //echo $username;
-
-
     //TODO
     $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  where  patient.pid=$userid ";
 
     if($_POST){
         //print_r($_POST);
-        
-
-
-        
         if(!empty($_POST["sheduledate"])){
             $sheduledate=$_POST["sheduledate"];
             $sqlmain.=" and schedule.scheduledate='$sheduledate' ";
         };
-
-    
-
         //echo $sqlmain;
-
     }
 
     $sqlmain.="order by appointment.appodate  asc";
     $result= $database->query($sqlmain);
     ?>
     <div class="container">
-        <div class="menu">
-        <table class="menu-container" border="0">
-                <tr>
-                    <td style="padding:10px" colspan="2">
-                        <table border="0" class="profile-container">
-                            <tr>
-                                <td width="30%" style="padding-left:20px" >
-                                    <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
-                                </td>
-                                <td style="padding:0px;margin:0px;">
-                                    <p class="profile-title"><?php echo substr($username,0,13)  ?>..</p>
-                                    <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <a href="../logout.php" ><input type="button" value="Se déconnecter" class="logout-btn btn-primary-soft btn"></a>
-                                </td>
-                            </tr>
-                    </table>
-                    </td>
-                </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-home" >
-                        <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Accueil</p></a></div></a>
-                    </td>
-                </tr>
-                <tr class="menu-row">
-                    <td class="menu-btn menu-icon-doctor">
-                        <a href="doctors.php" class="non-style-link-menu"><div><p class="menu-text">Tous les Médecins</p></a></div>
-                    </td>
-                </tr>
-                
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-session">
-                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Séances Planifiées</p></div></a>
-                    </td>
-                </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-appoinment  menu-active menu-icon-appoinment-active">
-                        <a href="appointment.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Mes Réservations</p></a></div>
-                    </td>
-                </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-settings">
-                        <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Paramètres</p></a></div>
-                    </td>
-                </tr>
-                
-            </table>
-        </div>
+        <?php include_once '../includes/patientSidebar.php'?>
         <div class="dash-body">
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
@@ -152,7 +76,7 @@
                         </p>
                     </td>
                     <td width="10%">
-                        <button  class="btn-label"  style="display: flex;justify-content: center;align-items: center;"><img src="../img/calendar.svg" width="100%"></button>
+                        <button  class="btn-label"  style="display: flex;justify-content: center;align-items: center;"><img src="../assets/img/calendar.svg" width="100%"></button>
                     </td>
 
 
@@ -515,6 +439,4 @@
 
     ?>
     </div>
-
-</body>
-</html>
+<?php include_once '../includes/footer.php'?>

@@ -1,5 +1,15 @@
 <?php
+    $cssLink="../assets/css/admin.css";
     $pageTitle="Tableau de bord";
+    $cssStyle=".dashbord-tables{
+            animation: transitionIn-Y-over 0.5s;
+        }
+        .filter-container{
+            animation: transitionIn-Y-bottom  0.5s;
+        }
+        .sub-table,.anime{
+            animation: transitionIn-Y-bottom 0.5s;
+        }";
     include_once '../includes/patientHeader.php';
 ?>
 <?php
@@ -252,4 +262,4 @@
             </table>
         </div>
     </div>
-<?php include_once '../includes/patientFooter.php'?>
+<?php include_once '../includes/footer.php'?>
