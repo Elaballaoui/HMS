@@ -1,7 +1,4 @@
 <?php
-
-    //learn from w3schools.com
-
 global $database;
 session_start();
 
@@ -11,14 +8,12 @@ session_start();
         }else{
             $useremail=$_SESSION["user"];
         }
-
     }else{
         header("location: ../login.php");
     }
-    
 
     //import database
-    include("../connection.php");
+    include("../includes/connection.php");
     $sqlmain= "select * from patient where pemail=?";
     $stmt = $database->prepare($sqlmain);
     $stmt->bind_param("s",$useremail);
@@ -27,7 +22,6 @@ session_start();
     $userfetch=$userrow->fetch_assoc();
     $userid= $userfetch["pid"];
     $username=$userfetch["pname"];
-
 
     if($_POST){
         if(isset($_POST["booknow"])){
@@ -39,7 +33,6 @@ session_start();
             $result= $database->query($sql2);
             //echo $apponom;
             header("location: appointment.php?action=booking-added&id=".$apponum."&titleget=none");
-
         }
     }
  ?>

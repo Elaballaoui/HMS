@@ -37,7 +37,6 @@
     //echo $username;
     
     date_default_timezone_set('Asia/Kolkata');
-
     $today = date('Y-m-d');
     //echo $userid;
  ?>

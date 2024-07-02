@@ -70,7 +70,6 @@ if($_POST){
 }else{
     $error='<label for="promter" class="form-label">&nbsp;</label>';
 }
-
 ?>
 
 <center>

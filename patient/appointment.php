@@ -60,28 +60,22 @@
                     </td>
                     <td>
                         <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Historique de mes Réservations</p>
-                                           
                     </td>
                     <td width="15%">
-                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Date d'Aujourd'hui
-                        </p>
+                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">Date d'Aujourd'hui</p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php
-                        date_default_timezone_set('Asia/Kolkata');
+                                date_default_timezone_set('Asia/Kolkata');
 
-                        $today = date('d-m-Y');
-                        echo $today;
-                        ?>
+                                $today = date('d-m-Y');
+                                echo $today;
+                            ?>
                         </p>
                     </td>
                     <td width="10%">
                         <button  class="btn-label"  style="display: flex;justify-content: center;align-items: center;"><img src="../assets/img/calendar.svg" width="100%"></button>
                     </td>
-
-
                 </tr>
-               
                 <!-- <tr>
                     <td colspan="4" >
                         <div style="display: flex;margin-top: 40px;">
@@ -102,52 +96,36 @@
                         <table class="filter-container" border="0" >
                         <tr>
                            <td width="10%">
-
                            </td> 
-                        <td width="5%" style="text-align: center;">
-                        Date:
-                        </td>
-                        <td width="30%">
-                        <form action="" method="post">
-                            
-                            <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
-
-                        </td>
-                        
-                    <td width="12%">
-                        <input type="submit"  name="filter" value=" Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
-                        </form>
-                    </td>
-
-                    </tr>
+                            <td width="5%" style="text-align: center;">
+                            Date:
+                            </td>
+                            <td width="30%">
+                            <form action="" method="post">
+                                <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
+                            </td>
+                            <td width="12%">
+                                <input type="submit"  name="filter" value=" Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
+                                </form>
+                            </td>
+                        </tr>
                             </table>
-
                         </center>
                     </td>
-                    
                 </tr>
-                
-               
-                  
                 <tr>
                    <td colspan="4">
                        <center>
                         <div class="abc scroll">
                         <table width="93%" class="sub-table scrolldown" border="0" style="border:none">
-                        
                         <tbody>
-                        
                             <?php
-
-                                
-                                
-
                                 if($result->num_rows==0){
                                     echo '<tr>
                                     <td colspan="7">
                                     <br><br><br><br>
                                     <center>
-                                    <img src="../img/notfound.svg" width="25%">
+                                    <img src="../assets/img/notfound.svg" width="25%">
                                     
                                     <br>
                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
@@ -157,10 +135,8 @@
                                     <br><br><br><br>
                                     </td>
                                     </tr>';
-                                    
                                 }
                                 else{
-
                                     for ( $x=0; $x<($result->num_rows);$x++){
                                         echo "<tr>";
                                         for($q=0;$q<3;$q++){
@@ -184,12 +160,11 @@
                                             echo '
                                             <td style="width: 25%;">
                                                     <div  class="dashboard-items search-items"  >
-                                                    
                                                         <div style="width:100%;">
                                                         <div class="h3-search">
-                                                                    Date de Réservation: '.substr($appodate,0,30).'<br>
-                                                                    Numéro de Réference: OC-000-'.$appoid.'
-                                                                </div>
+                                                               Date de Réservation: '.substr($appodate,0,30).'<br>
+                                                               Numéro de Réference: OC-000-'.$appoid.'
+                                                        </div>
                                                                 <div class="h1-search">
                                                                     '.substr($title,0,21).'<br>
                                                                 </div>
@@ -199,21 +174,16 @@
                                                                 <div class="h3-search">
                                                                     '.substr($docname,0,30).'
                                                                 </div>
-                                                                
-                                                                
                                                                 <div class="h4-search">
                                                                     Date Planifiée: '.$scheduledate.'<br>Commence: <b>@'.substr($scheduletime,0,5).'</b> (24h)
                                                                 </div>
                                                                 <br>
                                                                 <a href="?action=drop&id='.$appoid.'&title='.$title.'&doc='.$docname.'" ><button  class="login-btn btn-primary-soft btn "  style="padding-top:11px;padding-bottom:11px;width:100%"><font class="tn-in-text">Annuler la Réservation</font></button></a>
-                                                        </div>
-                                                                
+                                                        </div>      
                                                     </div>
                                                 </td>';
-    
                                         }
                                         echo "</tr>";
-                           
                                 // for ( $x=0; $x<$result->num_rows;$x++){
                                 //     $row=$result->fetch_assoc();
                                 //     $appoid=$row["appoid"];
@@ -257,9 +227,7 @@
                                     
                                 }
                             }
-                                 
                             ?>
- 
                             </tbody>
 
                         </table>
@@ -267,37 +235,30 @@
                         </center>
                    </td> 
                 </tr>
-                       
-                        
-                        
             </table>
         </div>
     </div>
     <?php
-    
     if($_GET){
         $id=$_GET["id"];
         $action=$_GET["action"];
         if($action=='booking-added'){
-            
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
+                <div class="popup">
                     <center>
                     <br><br>
                         <h2>Réservation Réussie.</h2>
                         <a class="close" href="appointment.php">&times;</a>
                         <div class="content">
-                        Votre Numéro de Rendez-vous est '.$id.'.<br><br>
-                            
+                        Votre Numéro de Rendez-vous est '.$id.'.<br><br>  
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        
                         <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
                         <br><br><br><br>
                         </div>
                     </center>
-            </div>
+                </div>
             </div>
             ';
         }elseif($action=='drop'){
@@ -306,7 +267,7 @@
             
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
+                <div class="popup">
                     <center>
                         <h2>Êtes-vous Sûr?</h2>
                         <a class="close" href="appointment.php">&times;</a>
@@ -314,15 +275,13 @@
                             Vous Souhaitez Annuler ce Rendez-vous?<br><br>
                             Nom de Séance: &nbsp;<b>'.substr($title,0,40).'</b><br>
                             Nom du médecin&nbsp; : <b>'.substr($docname,0,40).'</b><br><br>
-                            
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <a href="delete-appointment.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;OUI&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
                         <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
-
                         </div>
                     </center>
-            </div>
+                </div>
             </div>
             '; 
         }elseif($action=='view'){
@@ -352,20 +311,16 @@
                         <h2></h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            <strong>eDoc</strong> <br>
-                            
+                            <strong>eHospital</strong> <br>
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
-                        
                             <tr>
                                 <td>
                                     <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Voir les Détails.</p><br><br>
                                 </td>
                             </tr>
-                            
                             <tr>
-                                
                                 <td class="label-td" colspan="2">
                                     <label for="name" class="form-label">Nom Complet: </label>
                                 </td>
@@ -374,7 +329,6 @@
                                 <td class="label-td" colspan="2">
                                     '.$name.'<br><br>
                                 </td>
-                                
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
@@ -413,20 +367,15 @@
                                 </td>
                             </tr>
                             <tr>
-                            <td class="label-td" colspan="2">
-                            '.$spcil_name.'<br><br>
-                            </td>
+                                <td class="label-td" colspan="2">
+                                '.$spcil_name.'<br><br>
+                                </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a>
-                                
-                                    
+                                    <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a> 
                                 </td>
-                
                             </tr>
-                           
-
                         </table>
                         </div>
                     </center>
@@ -436,7 +385,6 @@
             ';  
     }
 }
-
     ?>
     </div>
 <?php include_once '../includes/footer.php'?>

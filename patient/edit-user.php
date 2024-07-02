@@ -1,12 +1,6 @@
-
-    <?php
-    
-    
-
+ <?php
     //import database
-    include("../connection.php");
-
-
+    include("../includes/connection.php");
 
     if($_POST){
         //print_r($_POST);
@@ -35,16 +29,13 @@
             }else{
                 $id2=$id;
             }
-            
 
             if($id2!=$id){
                 $error='1';
                 //$resultqq1= $database->query("select * from doctor where docemail='$email';");
                 //$did= $resultqq1->fetch_assoc()["docid"];
                 //if($resultqq1->num_rows==1){
-                    
             }else{
-
                 //$sql1="insert into doctor(docemail,docname,docpassword,docnic,doctel,specialties) values('$email','$name','$password','$nic','$tele',$spec);";
                 $sql1="update patient set pemail='$email',pname='$name',ppassword='$password',pnic='$nic',ptel='$tele',paddress='$address' where pid=$id ;";
                 $database->query($sql1);
@@ -54,26 +45,13 @@
                 echo $sql1;
                 
                 $error= '4';
-                
             }
-            
         }else{
             $error='2';
         }
-    
-    
-        
-        
     }else{
         //header('location: signup.php');
         $error='3';
     }
-    
-
     header("location: settings.php?action=edit&error=".$error."&id=".$id);
     ?>
-    
-   
-
-</body>
-</html>

@@ -1,5 +1,4 @@
 <?php
-
     session_start();
 
     if(isset($_SESSION["user"])){
@@ -8,14 +7,12 @@
         }else{
             $useremail=$_SESSION["user"];
         }
-
     }else{
         header("location: ../login.php");
     }
-    
 
     //import database
-    include("../connection.php");
+    include("../includes/connection.php");
     $sqlmain= "select * from patient where pemail=?";
     $stmt = $database->prepare($sqlmain);
     $stmt->bind_param("s",$useremail);
@@ -25,7 +22,6 @@
     $userid= $userfetch["pid"];
     $username=$userfetch["pname"];
 
-    
     if($_GET){
         //import database
         include("../connection.php");
@@ -43,7 +39,6 @@
         $stmt->execute();
         $result = $stmt->get_result();
 
-
         $sqlmain= "delete from patient where pemail=?";
         $stmt = $database->prepare($sqlmain);
         $stmt->bind_param("s",$email);
@@ -53,6 +48,4 @@
         //print_r($email);
         header("location: ../logout.php");
     }
-
-
 ?>
