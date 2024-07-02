@@ -12,7 +12,7 @@ global $pageTitle;
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href=<?php echo $cssLink ?> />
     <link rel="icon" href="assets/img/hospital-logo.png">
-    <title>eHospital | <?php echo $pageTitle ?></title>
+    <title><?php echo $pageTitle ?></title>
     <style>
         table {
             animation: transitionIn-Y-bottom 0.5s;

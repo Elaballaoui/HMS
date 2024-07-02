@@ -1,9 +1,9 @@
 <?php
-$cssLink="assets/css/signup.css";
-$pageTitle="Inscrire";
+global $cssLinkList, $pageTitleList;
+require_once __DIR__.'/config/app.php';
+$cssLink=$cssLinkList['signup'];
+$pageTitle=$pageTitleList['Inscrire'];
 include_once 'includes/header.php';
-//learn from w3schools.com
-//Unset all the server side variables
 
 session_start();
 

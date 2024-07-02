@@ -1,6 +1,8 @@
 <?php
-$cssLink="assets/css/index.css";
-$pageTitle="Accueil";
+global $pageTitleList, $cssLinkList;
+require_once __DIR__.'/config/app.php';
+$cssLink=$cssLinkList['index'];
+$pageTitle=$pageTitleList['Accueil'];
 include_once 'includes/header.php';
 ?>
 

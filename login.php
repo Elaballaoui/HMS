@@ -1,6 +1,8 @@
 <?php
-$cssLink="assets/css/login.css";
-$pageTitle="Connecter";
+global $cssLinkList, $pageTitleList;
+require_once __DIR__.'/config/app.php';
+$cssLink=$cssLinkList['login'];
+$pageTitle=$pageTitleList['Connecter'];
 include_once 'includes/header.php';
 
 session_start();
