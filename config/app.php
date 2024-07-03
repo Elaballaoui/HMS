@@ -9,7 +9,8 @@
         'Mes réservations'=>'eHospital | Mes réservations',
         'Paramètres'=>'eHospital | Paramètres',
         'Réservation'=>'eHospital | Réservation',
-        'Mes Séances'=>'eHospital | Mes Séances'
+        'Mes Séances'=>'eHospital | Mes Séances',
+        'Mes Patients'=>'eHospital | Mes Patients'
     ];
     $cssLinkList=[
         'index'=>'assets/css/index.css',
@@ -51,8 +52,17 @@
         .doctor-heade{
             animation: transitionIn-Y-over 0.5s;
         }',
-        'appointmentScheduleDoctor'=>'.popup{
+        'appointmentSchedulePatientDoctor'=>'.popup{
             animation: transitionIn-Y-bottom 0.5s;
+        }
+        .sub-table{
+            animation: transitionIn-Y-bottom 0.5s;
+        }',
+        'settingsDoctor'=>'.dashbord-tables{
+            animation: transitionIn-Y-over 0.5s;
+        }
+        .filter-container{
+            animation: transitionIn-X  0.5s;
         }
         .sub-table{
             animation: transitionIn-Y-bottom 0.5s;

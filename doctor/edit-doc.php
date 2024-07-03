@@ -1,12 +1,6 @@
-
-    <?php
-    
-    
-
+ <?php
     //import database
-    include("../connection.php");
-
-
+    include("../includes/connection.php");
 
     if($_POST){
         //print_r($_POST);
@@ -37,9 +31,7 @@
                 //$resultqq1= $database->query("select * from doctor where docemail='$email';");
                 //$did= $resultqq1->fetch_assoc()["docid"];
                 //if($resultqq1->num_rows==1){
-                    
             }else{
-
                 //$sql1="insert into doctor(docemail,docname,docpassword,docnic,doctel,specialties) values('$email','$name','$password','$nic','$tele',$spec);";
                 $sql1="update doctor set docemail='$email',docname='$name',docpassword='$password',docnic='$nic',doctel='$tele',specialties=$spec where docid=$id ;";
                 $database->query($sql1);
@@ -50,26 +42,14 @@
                 echo $sql1;
                 //echo $sql2;
                 $error= '4';
-                
             }
-            
         }else{
             $error='2';
         }
-    
-    
-        
-        
     }else{
         //header('location: signup.php');
         $error='3';
     }
-    
 
     header("location: settings.php?action=edit&error=".$error."&id=".$id);
     ?>
-    
-   
-
-</body>
-</html>
