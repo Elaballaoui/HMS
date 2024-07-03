@@ -32,7 +32,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr>
                     <td width="13%">
-                        <a href="doctors.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
+                        <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
                     </td>
                     <td>
                         <form action="" method="post" class="header-search">
@@ -57,8 +57,8 @@
                     <td width="15%">
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">Date d'Aujourd'hui</p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
-                            <?php 
-                                date_default_timezone_set('Asia/Kolkata');
+                            <?php
+                                date_default_timezone_set('Africa/Casablanca');
 
                                 $date = date('d-m-Y');
                                 echo $date;
@@ -381,12 +381,12 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="nic" class="form-label">NIC: </label>
+                                            <label for="nic" class="form-label">CIN: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="text" name="nic" class="input-text" placeholder="NIC Number" value="'.$nic.'" required><br>
+                                            <input type="text" name="nic" class="input-text" placeholder="Nombre CIN" value="'.$nic.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>

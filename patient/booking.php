@@ -33,7 +33,7 @@
     //echo $userid;
     //echo $username;
 
-    date_default_timezone_set('Asia/Kolkata');
+    date_default_timezone_set('Africa/Casablanca');
 
     $today = date('Y-m-d');
  //echo $userid;
@@ -44,7 +44,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td width="13%" >
-                    <a href="schedule.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                    <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
                     </td>
                     <td >
                             <form action="schedule.php" method="post" class="header-search">

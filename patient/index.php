@@ -48,8 +48,7 @@
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">Date d'Aujourd'hui</p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php
-                                date_default_timezone_set('Asia/Kolkata');
-        
+                                date_default_timezone_set('Africa/Casablanca');
                                 $today = date('d-m-Y');
                                 echo $today;
 
