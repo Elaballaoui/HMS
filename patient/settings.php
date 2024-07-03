@@ -1,18 +1,11 @@
 <?php
-    $cssLink="../assets/css/admin.css";
-    $pageTitle="Paramètres";
-    $cssStyle=".dashbord-tables{
-                    animation: transitionIn-Y-over 0.5s;
-               }
-               .filter-container{
-                    animation: transitionIn-X  0.5s;
-               }
-               .sub-table{
-                    animation: transitionIn-Y-bottom 0.5s;
-               }";
+    global $cssLinkList, $pageTitleList, $cssStyleList;
+    require_once __DIR__.'/../config/app.php';
+    $cssLink=$cssLinkList['admin'];
+    $pageTitle=$pageTitleList['Paramètres'];
+    $cssStyle=$cssStyleList['indexSettingsPatient'];
     include_once '../includes/patientHeader.php';
-    ?>
-<?php
+
     session_start();
 
     if(isset($_SESSION["user"])){

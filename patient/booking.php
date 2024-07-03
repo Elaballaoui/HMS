@@ -1,15 +1,11 @@
 <?php
-    $cssLink="../assets/css/admin.css";
-    $pageTitle="Réservation";
-    $cssStyle=".popup{
-            animation: transitionIn-Y-bottom 0.5s;
-       }
-       .sub-table{
-            animation: transitionIn-Y-bottom 0.5s;
-       }";
+    global $cssLinkList, $pageTitleList, $cssStyleList;
+    require_once __DIR__.'/../config/app.php';
+    $cssLink=$cssLinkList['admin'];
+    $pageTitle=$pageTitleList['Réservation'];
+    $cssStyle=$cssStyleList['bookingPatient'];
     include_once '../includes/patientHeader.php';
-    ?>
-<?php
+
     global$userrow; global$database; global$userrow; global$userrow;
     session_start();
 

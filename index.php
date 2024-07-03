@@ -35,7 +35,7 @@ include_once 'includes/header.php';
                     Comment va la santé aujourd’hui ? Cela ne semble pas être
                     bon !<br />
                     Ne t'inquiète pas. Trouvez votre médecin en ligne Réservez comme
-                    vous le souhaitez avec eDoc. <br />
+                    vous le souhaitez avec eHospital. <br />
                     Nous vous proposons un service gratuit de canalisation de
                     médecins, prenez rendez-vous dès maintenant.
                 </p>

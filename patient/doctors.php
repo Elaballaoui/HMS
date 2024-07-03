@@ -1,15 +1,11 @@
 <?php
-    $cssLink="../assets/css/admin.css";
-    $pageTitle="Tous les Médecins";
-    $cssStyle=".popup{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
-        .sub-table{
-            animation: transitionIn-Y-bottom 0.5s;
-        }";
+    global $cssLinkList, $pageTitleList, $cssStyleList;
+    require_once __DIR__.'/../config/app.php';
+    $cssLink=$cssLinkList['admin'];
+    $pageTitle=$pageTitleList['Tous les Médecins'];
+    $cssStyle=$cssStyleList['doctorsScheduleAppointmentPatient'];
     include_once '../includes/patientHeader.php';
-?>
-<?php
+
     session_start();
 
     if(isset($_SESSION["user"])){
@@ -24,6 +20,7 @@
 
     //import database
     include("../includes/connection.php");
+
     $userrow = $database->query("select * from patient where pemail='$useremail'");
     $userfetch=$userrow->fetch_assoc();
     $userid= $userfetch["pid"];

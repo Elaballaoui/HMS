@@ -79,7 +79,7 @@ if($_POST){
         <table border="0" style="margin: 0;padding: 0;width: 60%;">
             <tr>
                 <td>
-                    <p class="header-text">Bienvenue sur eDoc!</p>
+                    <p class="header-text">Bienvenue sur eHospital!</p>
                 </td>
             </tr>
             <div class="form-body">
