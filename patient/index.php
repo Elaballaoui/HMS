@@ -49,7 +49,7 @@
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php
                                 date_default_timezone_set('Africa/Casablanca');
-                                $today = date('d-m-Y');
+                                $today = date('Y-m-d');
                                 echo $today;
 
                                 $patientrow = $database->query("select  * from  patient;");

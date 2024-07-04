@@ -47,17 +47,10 @@
                         </p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                                     <?php
-                                    date_default_timezone_set('Africa/Casablanca');
-        
-                                    $today = date('Y-m-d');
-                                    $today1 = date('d-m-Y');
-                                    echo $today1;
-
-//                                $patientrow = $database->query("select  * from  patient;");
-//                                $doctorrow = $database->query("select  * from  doctor;");
-//                                $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
-//                                $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
-                                ?>
+                                        date_default_timezone_set('Africa/Casablanca');
+                                        $today = date('d-m-Y');
+                                        echo $today;
+                                    ?>
                         </p>
                     </td>
                     <td width="10%">
