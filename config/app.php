@@ -10,7 +10,10 @@
         'Paramètres'=>'eHospital | Paramètres',
         'Réservation'=>'eHospital | Réservation',
         'Mes Séances'=>'eHospital | Mes Séances',
-        'Mes Patients'=>'eHospital | Mes Patients'
+        'Mes Patients'=>'eHospital | Mes Patients',
+        'Les Médecins'=>'eHospital | Les Médecins',
+        'Calendrier'=>'eHospital | Calendrier',
+        'Patients'=>'eHospital | Patients'
     ];
     $cssLinkList=[
         'index'=>'assets/css/index.css',
@@ -63,6 +66,21 @@
         }
         .filter-container{
             animation: transitionIn-X  0.5s;
+        }
+        .sub-table{
+            animation: transitionIn-Y-bottom 0.5s;
+        }',
+        'indexAdmin'=>'.dashbord-tables{
+            animation: transitionIn-Y-over 0.5s;
+        }
+        .filter-container{
+            animation: transitionIn-Y-bottom  0.5s;
+        }
+        .sub-table{
+            animation: transitionIn-Y-bottom 0.5s;
+        }',
+        'doctorsScheduleAppointmentsPatientsAdmin'=>'.popup{
+            animation: transitionIn-Y-bottom 0.5s;
         }
         .sub-table{
             animation: transitionIn-Y-bottom 0.5s;
