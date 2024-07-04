@@ -28,7 +28,6 @@
     $userfetch=$result->fetch_assoc();
     $userid= $userfetch["pid"];
     $username=$userfetch["pname"];
-
     ?>
     <div class="container">
         <?php include_once '../includes/patientSidebar.php'?>
@@ -42,15 +41,13 @@
                         <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Paramètres</p>
                     </td>
                     <td width="15%">
-                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Date d'Aujourd'hui
-                        </p>
+                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">Date d'Aujourd'hui</p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
-                                    <?php
-                                        date_default_timezone_set('Africa/Casablanca');
-                                        $today = date('d-m-Y');
-                                        echo $today;
-                                    ?>
+                            <?php
+                                date_default_timezone_set('Africa/Casablanca');
+                                $today = date('d-m-Y');
+                                echo $today;
+                            ?>
                         </p>
                     </td>
                     <td width="10%">
@@ -85,17 +82,17 @@
                                 </td>
                             </tr>
                             <tr>
-                            <td style="width: 25%;">
+                                <td style="width: 25%;">
                                     <a href="?action=view&id=<?php echo $userid ?>" class="non-style-link">
-                                    <div  class="dashboard-items setting-tabs"  style="padding:20px;margin:auto;width:95%;display: flex;">
-                                        <div class="btn-icon-back dashboard-icons-setting " style="background-image: url('../assets/img/icons/view-iceblue.svg');"></div>
-                                        <div>
+                                        <div  class="dashboard-items setting-tabs"  style="padding:20px;margin:auto;width:95%;display: flex;">
+                                            <div class="btn-icon-back dashboard-icons-setting " style="background-image: url('../assets/img/icons/view-iceblue.svg');"></div>
+                                            <div>
                                                 <div class="h1-dashboard" >Afficher les Détails du Compte</div><br>
                                                 <div class="h3-dashboard"  style="font-size: 15px;">Afficher les Informations Personnelles sur Votre Compte</div>
+                                            </div>
                                         </div>
-                                    </div>
                                     </a>
-                            </td>
+                                </td>
                             </tr>
                             <tr>
                                 <td colspan="4">
@@ -104,7 +101,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 25%;">
-                                        <a href="?action=drop&id=<?php echo $userid.'&name='.$username ?>" class="non-style-link">
+                                    <a href="?action=drop&id=<?php echo $userid.'&name='.$username ?>" class="non-style-link">
                                         <div  class="dashboard-items setting-tabs"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                             <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../assets/img/icons/patients-hover.svg');"></div>
                                             <div>
@@ -112,7 +109,7 @@
                                                 <div class="h3-dashboard"  style="font-size: 15px;">Supprimez votre Compte Définitivement</div>
                                             </div>
                                         </div>
-                                        </a>
+                                    </a>
                                 </td>
                             </tr>
                         </table>
@@ -131,19 +128,17 @@
             $nameget=$_GET["name"];
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
-                    <center>
-                        <h2>Êtes-vous sûr?</h2>
-                        <a class="close" href="settings.php">&times;</a>
-                        <div class="content">
-                            Vous Souhaitez Supprimer votre Compte<br>('.substr($nameget,0,40).').
-                        </div>
-                        <div style="display: flex;justify-content: center;">
+                <div class="popup">
+                <center>
+                    <h2>Êtes-vous sûr?</h2>
+                    <a class="close" href="settings.php">&times;</a>
+                    <div class="content">Vous Souhaitez Supprimer votre Compte<br>('.substr($nameget,0,40).').</div>
+                    <div style="display: flex;justify-content: center;">
                         <a href="delete-account.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
                         <a href="settings.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
-                        </div>
-                    </center>
-            </div>
+                    </div>
+                </center>
+                </div>
             </div>
             ';
         }elseif($action=='view'){
@@ -166,9 +161,7 @@
                     <center>
                         <h2></h2>
                         <a class="close" href="settings.php">&times;</a>
-                        <div class="content" style="font-size: 25px;font-weight: bold;">
-                            eHospital <br>
-                        </div>
+                        <div class="content" style="font-size: 25px;font-weight: bold;">eHospital App<br></div>
                         <div style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
                             <tr>
@@ -274,9 +267,8 @@
             if($error_1!='4'){
                     echo '
                     <div id="popup1" class="overlay">
-                            <div class="popup">
+                        <div class="popup">
                             <center>
-                            
                                 <a class="close" href="settings.php">&times;</a> 
                                 <div style="display: flex;justify-content: center;">
                                 <div class="abc">
@@ -289,7 +281,7 @@
                                     <tr>
                                         <td>
                                             <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Modifier les Détails du Compte.</p>
-                                        Identification Utilisateur : '.$id.' <br><br>
+                                            Identification Utilisateur : '.$id.' <br><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -383,21 +375,19 @@
         }else{
             echo '
                 <div id="popup1" class="overlay">
-                        <div class="popup">
-                        <center>
-                        <br><br><br><br>
-                            <h2>Modifier avec Succès!</h2>
-                            <a class="close" href="settings.php">&times;</a>
-                            <div class="content">
-                                Si vous modifiez également votre adresse e-mail, veuillez vous déconnecter et vous reconnecter avec votre nouvelle adresse e-mail.
-                            </div>
-                            <div style="display: flex;justify-content: center;">
-                            <a href="settings.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
-                            <a href="../logout.php" class="non-style-link"><button  class="btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Se déconnecter&nbsp;&nbsp;</font></button></a>
-                            </div>
-                            <br><br>
-                        </center>
-                </div>
+                    <div class="popup">
+                    <center>
+                    <br><br><br><br>
+                        <h2>Modifier avec Succès!</h2>
+                        <a class="close" href="settings.php">&times;</a>
+                        <div class="content">Si vous modifiez également votre adresse e-mail, veuillez vous déconnecter et vous reconnecter avec votre nouvelle adresse e-mail.</div>
+                        <div style="display: flex;justify-content: center;">
+                        <a href="settings.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
+                        <a href="../logout.php" class="non-style-link"><button  class="btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Se déconnecter&nbsp;&nbsp;</font></button></a>
+                        </div>
+                        <br><br>
+                    </center>
+                    </div>
                 </div>
     ';
         }

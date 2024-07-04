@@ -89,7 +89,6 @@
                                         
                                         echo "<option value='$d'><br/>";
                                     };
-    
                                     echo '</datalist>';
                                 ?>
                                 <input type="Submit" value="Recherche" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
@@ -120,22 +119,18 @@
                                                                 <div class="h1-dashboard">
                                                                     <?php    echo $doctorrow->num_rows  ?>
                                                                 </div><br>
-                                                                <div class="h3-dashboard">
-                                                                    Tous les Médecins &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                </div>
+                                                                <div class="h3-dashboard">Tous les Médecins &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/doctors-hover.svg');"></div>
+                                                        <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/doctors-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 <td style="width: 25%;">
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
-                                                                <div class="h1-dashboard">
-                                                                    <?php    echo $patientrow->num_rows  ?>
-                                                                </div><br>
-                                                                <div class="h3-dashboard">
-                                                                    Tous les patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                </div>
+                                                            <div class="h1-dashboard">
+                                                                <?php    echo $patientrow->num_rows  ?>
+                                                            </div><br>
+                                                            <div class="h3-dashboard">Tous les patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                                         </div>
                                                         <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/patients-hover.svg');"></div>
                                                     </div>
@@ -145,14 +140,14 @@
                                                 <td style="width: 25%;">
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex; ">
                                                         <div>
-                                                                <div class="h1-dashboard" >
-                                                                    <?php    echo $appointmentrow ->num_rows  ?>
-                                                                </div><br>
-                                                                <div class="h3-dashboard" >
-                                                                    Nouvelle Réservation &nbsp;&nbsp;
-                                                                </div>
+                                                            <div class="h1-dashboard" >
+                                                                <?php    echo $appointmentrow ->num_rows  ?>
+                                                            </div><br>
+                                                            <div class="h3-dashboard" >
+                                                                Nouvelle Réservation &nbsp;&nbsp;
+                                                            </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../assets/img/icons/book-hover.svg');"></div>
+                                                        <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../assets/img/icons/book-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 <td style="width: 25%;">
@@ -161,9 +156,7 @@
                                                             <div class="h1-dashboard">
                                                                     <?php    echo $schedulerow ->num_rows  ?>
                                                             </div><br>
-                                                            <div class="h3-dashboard">
-                                                                    Séances D'aujourd'hui
-                                                            </div>
+                                                            <div class="h3-dashboard">Séances D'aujourd'hui</div>
                                                         </div>
                                                         <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/session-iceblue.svg');"></div>
                                                     </div>
@@ -178,20 +171,12 @@
                                         <div class="abc scroll" style="height: 250px;padding: 0;margin: 0;">
                                         <table width="85%" class="sub-table scrolldown" border="0" >
                                         <thead>
-                                        <tr>
-                                        <th class="table-headin">
-                                                    #.Réservat
-                                                    </th>
-                                                <th class="table-headin">
-                                                    Titre de la Séance
-                                                </th>
-                                                <th class="table-headin">
-                                                    Médecin
-                                                </th>
-                                                <th class="table-headin">
-                                                    Date et Heure Programmées
-                                                </th>
-                                        </tr>
+                                            <tr>
+                                                <th class="table-headin">Réservation</th>
+                                                <th class="table-headin">Titre de la Séance</th>
+                                                <th class="table-headin">Médecin</th>
+                                                <th class="table-headin">Date et Heure Programmées</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                             <?php
@@ -202,18 +187,17 @@
                 
                                                 if($result->num_rows==0){
                                                     echo '<tr>
-                                                    <td colspan="4">
-                                                    <br><br><br><br>
-                                                    <center>
-                                                    <img src="../assets/img/notfound.svg" width="25%">
-                                                    
-                                                    <br>
-                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Rien à montrer ici !</p>
-                                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Canaliser un médecin &nbsp;</font></button>
-                                                    </a>
-                                                    </center>
-                                                    <br><br><br><br>
-                                                    </td>
+                                                        <td colspan="4">
+                                                        <br><br><br><br>
+                                                        <center>
+                                                        <img src="../assets/img/notfound.svg" width="25%">
+                                                        <br>
+                                                        <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Rien à montrer ici !</p>
+                                                        <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Canaliser un médecin &nbsp;</font></button>
+                                                        </a>
+                                                        </center>
+                                                        <br><br><br><br>
+                                                        </td>
                                                     </tr>';
                                                 }
                                                 else{
@@ -228,13 +212,13 @@
                                                    
                                                     echo '<tr>
                                                         <td style="padding:30px;font-size:25px;font-weight:700;"> &nbsp;'.
-                                                        $apponum
+                                                            $apponum
                                                         .'</td>
                                                         <td style="padding:20px;"> &nbsp;'.
-                                                        substr($title,0,30)
+                                                            substr($title,0,30)
                                                         .'</td>
                                                         <td>
-                                                        '.substr($docname,0,20).'
+                                                            '.substr($docname,0,20).'
                                                         </td>
                                                         <td style="text-align:center;">
                                                             '.substr($scheduledate,0,10).' '.substr($scheduletime,0,5).'

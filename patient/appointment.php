@@ -31,7 +31,6 @@
 
     //echo $userid;
     //echo $username;
-    //TODO
     $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  where  patient.pid=$userid ";
 
     if($_POST){
@@ -62,7 +61,6 @@
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php
                                 date_default_timezone_set('Africa/Casablanca');
-
                                 $today = date('d-m-Y');
                                 echo $today;
                             ?>
@@ -90,22 +88,22 @@
                     <td colspan="4" style="padding-top:0px;width: 100%;" >
                         <center>
                         <table class="filter-container" border="0" >
-                        <tr>
-                           <td width="10%">
-                           </td> 
-                            <td width="5%" style="text-align: center;">
-                            Date:
-                            </td>
-                            <td width="30%">
-                            <form action="" method="post">
-                                <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
-                            </td>
-                            <td width="12%">
-                                <input type="submit"  name="filter" value=" Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
-                                </form>
-                            </td>
-                        </tr>
-                            </table>
+                            <tr>
+                               <td width="10%">
+                               </td>
+                                <td width="5%" style="text-align: center;">
+                                    Date:
+                                </td>
+                                <td width="30%">
+                                <form action="" method="post">
+                                    <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
+                                </td>
+                                <td width="12%">
+                                    <input type="submit"  name="filter" value=" Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
                         </center>
                     </td>
                 </tr>
@@ -118,18 +116,16 @@
                             <?php
                                 if($result->num_rows==0){
                                     echo '<tr>
-                                    <td colspan="7">
-                                    <br><br><br><br>
-                                    <center>
-                                    <img src="../assets/img/notfound.svg" width="25%">
-                                    
-                                    <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                    <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Rendez-vous &nbsp;</font></button>
-                                    </a>
-                                    </center>
-                                    <br><br><br><br>
-                                    </td>
+                                        <td colspan="7">
+                                        <br><br><br><br>
+                                        <center>
+                                        <img src="../assets/img/notfound.svg" width="25%">
+                                        <br>
+                                        <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
+                                        <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Rendez-vous &nbsp;</font></button></a>
+                                        </center>
+                                        <br><br><br><br>
+                                        </td>
                                     </tr>';
                                 }
                                 else{
@@ -154,25 +150,25 @@
                                             }
     
                                             echo '
-                                            <td style="width: 25%;">
+                                                <td style="width: 25%;">
                                                     <div  class="dashboard-items search-items"  >
                                                         <div style="width:100%;">
-                                                        <div class="h3-search">
+                                                            <div class="h3-search">
                                                                Date de Réservation: '.substr($appodate,0,30).'<br>
                                                                Numéro de Réference: OC-000-'.$appoid.'
-                                                        </div>
-                                                                <div class="h1-search">
-                                                                    '.substr($title,0,21).'<br>
-                                                                </div>
-                                                                <div class="h3-search">
-                                                                    Numéro de Rendez-vous:<div class="h1-search">0'.$apponum.'</div>
-                                                                </div>
-                                                                <div class="h3-search">
-                                                                    '.substr($docname,0,30).'
-                                                                </div>
-                                                                <div class="h4-search">
-                                                                    Date Planifiée: '.$scheduledate.'<br>Commence: <b>@'.substr($scheduletime,0,5).'</b> (24h)
-                                                                </div>
+                                                            </div>
+                                                            <div class="h1-search">
+                                                                '.substr($title,0,21).'<br>
+                                                            </div>
+                                                            <div class="h3-search">
+                                                                Numéro de Rendez-vous:<div class="h1-search">0'.$apponum.'</div>
+                                                            </div>
+                                                            <div class="h3-search">
+                                                                '.substr($docname,0,30).'
+                                                            </div>
+                                                            <div class="h4-search">
+                                                                Date Planifiée: '.$scheduledate.'<br>Commence: <b>@'.substr($scheduletime,0,5).'</b> (24h)
+                                                            </div>
                                                                 <br>
                                                                 <a href="?action=drop&id='.$appoid.'&title='.$title.'&doc='.$docname.'" ><button  class="login-btn btn-primary-soft btn "  style="padding-top:11px;padding-bottom:11px;width:100%"><font class="tn-in-text">Annuler la Réservation</font></button></a>
                                                         </div>      
@@ -225,7 +221,6 @@
                             }
                             ?>
                             </tbody>
-
                         </table>
                         </div>
                         </center>
@@ -246,9 +241,7 @@
                     <br><br>
                         <h2>Réservation Réussie.</h2>
                         <a class="close" href="appointment.php">&times;</a>
-                        <div class="content">
-                        Votre Numéro de Rendez-vous est '.$id.'.<br><br>  
-                        </div>
+                        <div class="content">Votre Numéro de Rendez-vous est '.$id.'.<br><br>  </div>
                         <div style="display: flex;justify-content: center;">
                         <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
                         <br><br><br><br>
@@ -307,7 +300,7 @@
                         <h2></h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            <strong>eHospital</strong> <br>
+                            <strong>eHospital App</strong> <br>
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
@@ -382,5 +375,4 @@
     }
 }
     ?>
-    </div>
 <?php include_once '../includes/footer.php'?>

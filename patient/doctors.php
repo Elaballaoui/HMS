@@ -59,7 +59,6 @@
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php
                                 date_default_timezone_set('Africa/Casablanca');
-
                                 $date = date('d-m-Y');
                                 echo $date;
                             ?>
@@ -90,18 +89,11 @@
                        <div class="abc scroll">
                        <table width="93%" class="sub-table scrolldown" border="0">
                        <thead>
-                       <tr>
-                           <th class="table-headin">
-                               Nom du Médecin
-                           </th>
-                           <th class="table-headin">
-                               Email
-                           </th>
-                           <th class="table-headin">
-                               Spécialités
-                           </th>
-                           <th class="table-headin">
-                               Actions
+                           <tr>
+                               <th class="table-headin">Nom du Médecin</th>
+                               <th class="table-headin">Email</th>
+                               <th class="table-headin">Spécialités</th>
+                               <th class="table-headin">Actions</th>
                            </tr>
                        </thead>
                            <tbody>
@@ -110,17 +102,17 @@
 
                                 if($result->num_rows==0){
                                     echo '<tr>
-                                    <td colspan="4">
-                                    <br><br><br><br>
-                                    <center>
-                                    <img src="../assets/img/notfound.svg" width="25%">
-                                    <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                    <a class="non-style-link" href="doctors.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Médecins &nbsp;</font></button>
-                                    </a>
-                                    </center>
-                                    <br><br><br><br>
-                                    </td>
+                                        <td colspan="4">
+                                            <br><br><br><br>
+                                            <center>
+                                            <img src="../assets/img/notfound.svg" width="25%">
+                                            <br>
+                                            <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
+                                            <a class="non-style-link" href="doctors.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Médecins &nbsp;</font></button>
+                                            </a>
+                                            </center>
+                                            <br><br><br><br>
+                                        </td>
                                     </tr>';
                                 }
                                 else{
@@ -135,20 +127,20 @@
                                     $spcil_name=$spcil_array["sname"];
                                     echo '<tr>
                                         <td> &nbsp;'.
-                                        substr($name,0,30)
+                                            substr($name,0,30)
                                         .'</td>
                                         <td>
-                                        '.substr($email,0,20).'
+                                            '.substr($email,0,20).'
                                         </td>
                                         <td>
                                             '.substr($spcil_name,0,20).'
                                         </td>
                                         <td>
-                                        <div style="display:flex;justify-content: center;">
-                                        <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Vue</font></button></a>
+                                            <div style="display:flex;justify-content: center;">
+                                                <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Voire</font></button></a>
                                        &nbsp;&nbsp;&nbsp;
-                                       <a href="?action=session&id='.$docid.'&name='.$name.'"  class="non-style-link"><button  class="btn-primary-soft btn button-icon menu-icon-session-active"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Séances</font></button></a>
-                                        </div>
+                                                <a href="?action=session&id='.$docid.'&name='.$name.'"  class="non-style-link"><button  class="btn-primary-soft btn button-icon menu-icon-session-active"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Séances</font></button></a>
+                                            </div>
                                         </td>
                                     </tr>';
                                 }
@@ -171,19 +163,17 @@
             $nameget=$_GET["name"];
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
-                    <center>
-                        <h2>Êtes-vous sûr?</h2>
-                        <a class="close" href="doctors.php">&times;</a>
-                        <div class="content">
-                            Vous souhaitez supprimer cet enregistrement<br>('.substr($nameget,0,40).').  
-                        </div>
-                        <div style="display: flex;justify-content: center;">
+                <div class="popup">
+                <center>
+                    <h2>Êtes-vous sûr?</h2>
+                    <a class="close" href="doctors.php">&times;</a>
+                    <div class="content">Vous souhaitez supprimer cet enregistrement<br>('.substr($nameget,0,40).').  </div>
+                    <div style="display: flex;justify-content: center;">
                         <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
                         <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non &nbsp;&nbsp;</font></button></a>
-                        </div>
-                    </center>
                     </div>
+                </center>
+                </div>
             </div>
             ';
         }elseif($action=='view'){
@@ -208,7 +198,7 @@
             $tele=$row['doctel'];
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
+                <div class="popup">
                     <center>
                         <h2></h2>
                         <a class="close" href="doctors.php">&times;</a>
@@ -269,19 +259,19 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$spcil_name.'<br><br>
+                                    '.$spcil_name.'<br><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a> 
+                                    <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn"></a> 
                                 </td>
                             </tr>
                         </table>
                         </div>
                     </center>
                     <br><br>
-            </div>
+                </div>
             </div>
             ';
         }elseif($action=='session'){
@@ -292,13 +282,11 @@
                     <center>
                         <h2>Rediriger vers les Séances des Médecins ?</h2>
                         <a class="close" href="doctors.php">&times;</a>
-                        <div class="content">
-                            Vous souhaitez afficher toutes les sessions de <br>('.substr($name,0,40).').
-                        </div>
+                        <div class="content">Vous souhaitez afficher toutes les sessions de <br>('.substr($name,0,40).').</div>
                         <form action="schedule.php" method="post" style="display: flex">
                             <input type="hidden" name="search" value="'.$name.'">
                             <div style="display: flex;justify-content:center;margin-left:45%;margin-top:6%;;margin-bottom:6%;">
-                            <input type="submit"  value="Oui" class="btn-primary btn">
+                            <input type="submit" value="Oui" class="btn-primary btn">
                             </div>
                     </center>
                 </div>
@@ -353,8 +341,8 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Edit Doctor Details.</p>
-                                            Doctor ID : '.$id.' (Auto Generated)<br><br>
+                                            <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Modifier les Détails du Médecin.</p>
+                                            ID Doctor : '.$id.' (Auto Généré)<br><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -366,17 +354,17 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                        <input type="email" name="email" class="input-text" placeholder="Email Address" value="'.$email.'" required><br>
+                                        <input type="email" name="email" class="input-text" placeholder="Adresse Email" value="'.$email.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="name" class="form-label">Name: </label>
+                                            <label for="name" class="form-label">Nom: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="text" name="name" class="input-text" placeholder="Doctor Name" value="'.$name.'" required><br>
+                                            <input type="text" name="name" class="input-text" placeholder="Nom du Médecin" value="'.$name.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -391,17 +379,17 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="Tele" class="form-label">Telephone: </label>
+                                            <label for="Tele" class="form-label">Téléphone: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="tel" name="Tele" class="input-text" placeholder="Telephone Number" value="'.$tele.'" required><br>
+                                            <input type="tel" name="Tele" class="input-text" placeholder="Nombre Téléphone" value="'.$tele.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="spec" class="form-label">Choose specialties: (Current'.$spcil_name.')</label>
+                                            <label for="spec" class="form-label">Choisissez des spécialités: (Actuel'.$spcil_name.')</label>
                                         </td>
                                     </tr>
                                     <tr>
@@ -420,28 +408,28 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="password" class="form-label">Password: </label>
+                                            <label for="password" class="form-label">Mot de passe: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="password" name="password" class="input-text" placeholder="Defind a Password" required><br>
+                                            <input type="password" name="password" class="input-text" placeholder="Définir un Mot de Passe" required><br>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="cpassword" class="form-label">Conform Password: </label>
+                                            <label for="cpassword" class="form-label">Confirmez le Mot de Passe: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="password" name="cpassword" class="input-text" placeholder="Conform Password" required><br>
+                                            <input type="password" name="cpassword" class="input-text" placeholder="Confirmez le Mot de Passe" required><br>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td colspan="2">
-                                            <input type="reset" value="Reset" class="login-btn btn-primary-soft btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <input type="submit" value="Save" class="login-btn btn-primary btn">
+                                            <input type="reset" value="Réinitialiser" class="login-btn btn-primary-soft btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="submit" value="Enregistrer" class="login-btn btn-primary btn">
                                         </td>
                                     </tr>
                                     </form>
@@ -457,19 +445,19 @@
         }else{
             echo '
                 <div id="popup1" class="overlay">
-                        <div class="popup">
-                        <center>
-                        <br><br><br><br>
-                            <h2>Edit Successfully!</h2>
-                            <a class="close" href="doctors.php">&times;</a>
-                            <div class="content">
-                            </div>
-                            <div style="display: flex;justify-content: center;">
-                            <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
-                            </div>
-                            <br><br>
-                        </center>
-                </div>
+                    <div class="popup">
+                    <center>
+                    <br><br><br><br>
+                        <h2>Modifier avec Succès!</h2>
+                        <a class="close" href="doctors.php">&times;</a>
+                        <div class="content">
+                        </div>
+                        <div style="display: flex;justify-content: center;">
+                        <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
+                        </div>
+                        <br><br>
+                    </center>
+                    </div>
                 </div>
     ';
             };
