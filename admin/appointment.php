@@ -25,13 +25,13 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td width="13%" >
-                        <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                        <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
                     </td>
                     <td>
-                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Appointment Manager</p>
+                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Gestion des Réservations</p>
                     </td>
                     <td width="15%">
-                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">Today's Date</p>
+                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">Date d'Aujourd'hui</p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php
                                 date_default_timezone_set('Africa/Casablanca');
@@ -42,7 +42,7 @@
                         </p>
                     </td>
                     <td width="10%">
-                        <button  class="btn-label"  style="display: flex;justify-content: center;align-items: center;"><img src="../assets/img/calendar.svg" width="100%"></button>
+                        <button class="btn-label" style="display: flex;justify-content: center;align-items: center;"><img src="../assets/img/calendar.svg" width="100%"></button>
                     </td>
                 </tr>
                 <!-- <tr>
@@ -56,7 +56,7 @@
                 </tr> -->
                 <tr>
                     <td colspan="4" style="padding-top:10px;width: 100%;" >
-                        <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Appointments (<?php echo $list110->num_rows; ?>)</p>
+                        <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">Tous les Rendez-vous (<?php echo $list110->num_rows; ?>)</p>
                     </td>
                 </tr>
                 <tr>
@@ -73,11 +73,11 @@
                             <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
                         </td>
                         <td width="5%" style="text-align: center;">
-                            Doctor:
+                            Médecin:
                         </td>
                         <td width="30%">
                             <select name="docid" id="" class="box filter-container-items" style="width:90% ;height: 37px;margin: 0;" >
-                                <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>
+                                <option value="" disabled selected hidden>Choisissez le Nom du Médecin dans la liste</option><br/>
                                 <?php
                                     $list11 = $database->query("select  * from  doctor order by docname asc;");
 
@@ -91,7 +91,7 @@
                             </select>
                         </td>
                         <td width="12%">
-                            <input type="submit"  name="filter" value=" Filter" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
+                            <input type="submit"  name="filter" value="Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
                             </form>
                         </td>
                         </tr>
@@ -138,13 +138,13 @@
                         <table width="93%" class="sub-table scrolldown" border="0">
                             <thead>
                                 <tr>
-                                    <th class="table-headin">Patient name</th>
-                                    <th class="table-headin">Appointment number</th>
-                                    <th class="table-headin">Doctor</th>
-                                    <th class="table-headin">Session Title</th>
-                                    <th class="table-headin" style="font-size:10px">Session Date & Time</th>
-                                    <th class="table-headin">Appointment Date</th>
-                                    <th class="table-headin">Events</th>
+                                    <th class="table-headin">Nom Patient</th>
+                                    <th class="table-headin">Nombre du rendez-vous</th>
+                                    <th class="table-headin">Médecin</th>
+                                    <th class="table-headin">Titre de la séance</th>
+                                    <th class="table-headin" style="font-size:10px">Date & Heure du Séance</th>
+                                    <th class="table-headin">Date du Rendez-vous</th>
+                                    <th class="table-headin">Actions</th>
                                 </tr>
                             </thead>
                         <tbody>
@@ -158,9 +158,8 @@
                                             <center>
                                             <img src="../assets/img/notfound.svg" width="25%">
                                             <br>
-                                            <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
-                                            <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
-                                            </a>
+                                            <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
+                                            <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Rendez-vous &nbsp;</font></button></a>
                                             </center>
                                             <br><br><br><br>
                                         </td>
@@ -200,7 +199,7 @@
                                                 <div style="display:flex;justify-content: center;">
                                                 <!--<a href="?action=view&id='.$appoid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
                                                &nbsp;&nbsp;&nbsp;-->
-                                                <a href="?action=drop&id='.$appoid.'&name='.$pname.'&session='.$title.'&apponum='.$apponum.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Cancel</font></button></a>
+                                                <a href="?action=drop&id='.$appoid.'&name='.$pname.'&session='.$title.'&apponum='.$apponum.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Annuler</font></button></a>
                                            &nbsp;&nbsp;&nbsp;  </div>
                                             </td>
                                         </tr>';
@@ -236,29 +235,29 @@
                         </tr>
                         <tr>
                             <td>
-                                <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Add New Session.</p><br>
+                                <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Ajouter une Nouvelle Séance.</p><br>
                             </td>
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
                             <form action="add-session.php" method="POST" class="add-new-form">
-                            <label for="title" class="form-label">Session Title : </label>
+                            <label for="title" class="form-label">Titre de la Séance: </label>
                             </td>
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
-                                <input type="text" name="title" class="input-text" placeholder="Name of this Session" required><br>
+                                <input type="text" name="title" class="input-text" placeholder="Nom de cet Séance" required><br>
                             </td>
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
-                                <label for="docid" class="form-label">Select Doctor: </label>
+                                <label for="docid" class="form-label">Sélectionnez un Médecin: </label>
                             </td>
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
                                 <select name="docid" id="" class="box" >
-                                <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>';
+                                <option value="" disabled selected hidden>Choisissez le Nom du Médecin dans la Liste</option><br/>';
                                     $list11 = $database->query("select  * from  doctor;");
 
                                     for ($y=0;$y<$list11->num_rows;$y++){
@@ -272,17 +271,17 @@
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
-                                <label for="nop" class="form-label">Number of Patients/Appointment Numbers : </label>
+                                <label for="nop" class="form-label">Nombre de patients/numéros de rendez-vous : </label>
                             </td>
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
-                                <input type="number" name="nop" class="input-text" min="0"  placeholder="The final appointment number for this session depends on this number" required><br>
+                                <input type="number" name="nop" class="input-text" min="0"  placeholder="Le numéro de rendez-vous définitif pour cette séance dépend de ce numéro" required><br>
                             </td>
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
-                                <label for="date" class="form-label">Session Date: </label>
+                                <label for="date" class="form-label">Date de la Séance: </label>
                             </td>
                         </tr>
                         <tr>
@@ -292,18 +291,18 @@
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
-                                <label for="time" class="form-label">Schedule Time: </label>
+                                <label for="time" class="form-label">Heure de Planification: </label>
                             </td>
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
-                                <input type="time" name="time" class="input-text" placeholder="Time" required><br>
+                                <input type="time" name="time" class="input-text" placeholder="Heure" required><br>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >
-                                <input type="submit" value="Place this Session" class="login-btn btn-primary btn" name="shedulesubmit">
+                                <input type="reset" value="Réinitialiser" class="login-btn btn-primary-soft btn" >
+                                <input type="submit" value="Placez cette Séance" class="login-btn btn-primary btn" name="shedulesubmit">
                             </td>
                         </tr>
                     </form>
@@ -323,10 +322,10 @@
                 <div class="popup">
                     <center>
                     <br><br>
-                        <h2>Session Placed.</h2>
+                        <h2>Séance Placée.</h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                            '.substr($titleget,0,40).' was scheduled.<br><br>
+                            '.substr($titleget,0,40).' était prévue.<br><br>
                         </div>
                         <div style="display: flex;justify-content: center;">
                             <a href="schedule.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
@@ -344,16 +343,16 @@
             <div id="popup1" class="overlay">
                 <div class="popup">
                     <center>
-                        <h2>Are you sure?</h2>
+                        <h2>Êtes-vous sûr?</h2>
                         <a class="close" href="appointment.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br><br>
-                            Patient Name: &nbsp;<b>'.substr($nameget,0,40).'</b><br>
-                            Appointment number &nbsp; : <b>'.substr($apponum,0,40).'</b><br><br>
+                            Vous souhaitez supprimer cet enregistrement<br><br>
+                            Nom Patient: &nbsp;<b>'.substr($nameget,0,40).'</b><br>
+                            Nombre du rendez-vous &nbsp; : <b>'.substr($apponum,0,40).'</b><br><br>
                         </div>
                         <div style="display: flex;justify-content: center;">
-                            <a href="delete-appointment.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
-                            <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;No&nbsp;&nbsp;</font></button></a>
+                            <a href="delete-appointment.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                            <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
                         </div>
                     </center>
                 </div>
@@ -383,12 +382,12 @@
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Afficher les Détails.</p><br><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Name: </label>
+                                    <label for="name" class="form-label">Nom: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -418,7 +417,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Telephone: </label>
+                                    <label for="Tele" class="form-label">Téléphone: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -428,7 +427,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Specialties: </label>
+                                    <label for="spec" class="form-label">Spécialités: </label>
                                 </td>
                             </tr>
                             <tr>

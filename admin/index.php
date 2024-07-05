@@ -56,7 +56,7 @@
                                 $doctorrow = $database->query("select  * from  doctor;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
-                        ?>
+                            ?>
                         </p>
                     </td>
                     <td width="10%">
@@ -81,18 +81,18 @@
                                             </div><br>
                                             <div class="h3-dashboard">Médecins &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                         </div>
-                                            <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/doctors-hover.svg');"></div>
+                                        <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/doctors-hover.svg');"></div>
                                     </div>
                                 </td>
                                 <td style="width: 25%;">
                                     <div class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                         <div>
-                                                <div class="h1-dashboard">
-                                                    <?php    echo $patientrow->num_rows  ?>
-                                                </div><br>
-                                                <div class="h3-dashboard">Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                            <div class="h1-dashboard">
+                                                <?php    echo $patientrow->num_rows  ?>
+                                            </div><br>
+                                            <div class="h3-dashboard">Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                         </div>
-                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/patients-hover.svg');"></div>
+                                        <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/patients-hover.svg');"></div>
                                     </div>
                                 </td>
                                 <td style="width: 25%;">
@@ -101,7 +101,7 @@
                                             <div class="h1-dashboard" >
                                                 <?php echo $appointmentrow ->num_rows  ?>
                                             </div><br>
-                                            <div class="h3-dashboard">Nouvelle Réservation &nbsp;&nbsp;</div>
+                                            <div class="h3-dashboard">Nouvelle Réservation&nbsp;&nbsp;</div>
                                         </div>
                                         <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../assets/img/icons/book-hover.svg');"></div>
                                     </div>
@@ -206,7 +206,7 @@
                                                             </td>
                                                         </tr>';
                                                     }
-                                            }
+                                                }
                                             ?>
                                         </tbody>
                                         </table>
