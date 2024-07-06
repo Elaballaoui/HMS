@@ -8,8 +8,8 @@
                             <img src="../assets/img/user.png" alt="" width="100%" style="border-radius:50%">
                         </td>
                         <td style="padding:0px;margin:0px;">
-                            <p class="profile-title">Administrator</p>
-                            <p class="profile-subtitle">admin@edoc.com</p>
+                            <p class="profile-title">Administrateur</p>
+                            <p class="profile-subtitle">admin@ehospital.com</p>
                         </td>
                     </tr>
                     <tr>

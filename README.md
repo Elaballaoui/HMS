@@ -1,13 +1,13 @@
 ## " ## eHospital PHP management system ## " 
 
 ## Admin account:
-email: admin@edoc.com <br/>
-password: 123
+email: admin@ehospital.com <br/>
+password: ehospital123
 
 ## Doctor account:
-email: doctor@edoc.com <br/>
-password: 123
+email: doctor@ehospital.com <br/>
+password: ehospital123
 
 ## Patient account:
-email: patient@edoc.com <br/>
-password: 123
+email: patient@ehospital.com <br/>
+password: ehospital123
