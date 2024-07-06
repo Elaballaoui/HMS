@@ -60,7 +60,7 @@
                         </p>
                     </td>
                     <td width="10%">
-                        <button  class="btn-label"  style="display: flex;justify-content: center;align-items: center;"><img src="../assets/img/calendar.svg" width="100%"></button>
+                        <button  class="btn-label" style="display: flex;justify-content: center;align-items: center;"><img src="../assets/img/calendar.svg" width="100%"></button>
                     </td>
                 </tr>
                 <tr>
@@ -117,7 +117,7 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $doctorrow->num_rows  ?>
+                                                                    <?php echo $doctorrow->num_rows ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">Tous les Médecins &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                                         </div>
@@ -128,9 +128,9 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
                                                             <div class="h1-dashboard">
-                                                                <?php    echo $patientrow->num_rows  ?>
+                                                                <?php echo $patientrow->num_rows ?>
                                                             </div><br>
-                                                            <div class="h3-dashboard">Tous les patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                                            <div class="h3-dashboard">Tous les Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                                         </div>
                                                         <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/patients-hover.svg');"></div>
                                                     </div>
@@ -141,11 +141,9 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex; ">
                                                         <div>
                                                             <div class="h1-dashboard" >
-                                                                <?php    echo $appointmentrow ->num_rows  ?>
+                                                                <?php echo $appointmentrow ->num_rows ?>
                                                             </div><br>
-                                                            <div class="h3-dashboard" >
-                                                                Nouvelle Réservation &nbsp;&nbsp;
-                                                            </div>
+                                                            <div class="h3-dashboard" >Nouvelle Réservation &nbsp;&nbsp;</div>
                                                         </div>
                                                         <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../assets/img/icons/book-hover.svg');"></div>
                                                     </div>
@@ -154,7 +152,7 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;padding-top:21px;padding-bottom:21px;">
                                                         <div>
                                                             <div class="h1-dashboard">
-                                                                    <?php    echo $schedulerow ->num_rows  ?>
+                                                                    <?php echo $schedulerow ->num_rows ?>
                                                             </div><br>
                                                             <div class="h3-dashboard">Séances D'aujourd'hui</div>
                                                         </div>
@@ -188,15 +186,14 @@
                                                 if($result->num_rows==0){
                                                     echo '<tr>
                                                         <td colspan="4">
-                                                        <br><br><br><br>
-                                                        <center>
-                                                        <img src="../assets/img/notfound.svg" width="25%">
-                                                        <br>
-                                                        <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Rien à montrer ici !</p>
-                                                        <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Canaliser un médecin &nbsp;</font></button>
-                                                        </a>
-                                                        </center>
-                                                        <br><br><br><br>
+                                                            <br><br><br><br>
+                                                            <center>
+                                                            <img src="../assets/img/notfound.svg" width="25%">
+                                                            <br>
+                                                            <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Rien à montrer ici !</p>
+                                                            <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Canaliser un médecin &nbsp;</font></button></a>
+                                                            </center>
+                                                            <br><br><br><br>
                                                         </td>
                                                     </tr>';
                                                 }
@@ -234,7 +231,7 @@
                                 </td>
                             </tr>
                         </table>
-                </td>
+                    </td>
             </table>
         </div>
     </div>

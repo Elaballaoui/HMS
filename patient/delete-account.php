@@ -24,7 +24,7 @@
 
     if($_GET){
         //import database
-        include("../connection.php");
+        include("../includes/connection.php");
         $id=$_GET["id"];
         $sqlmain= "select * from patient where pid=?";
         $stmt = $database->prepare($sqlmain);

@@ -37,8 +37,9 @@
     //echo $userid;
  ?>
  <div class="container">
-     <?php include_once '../includes/patientSidebar.php'?>
      <?php
+        include_once '../includes/patientSidebar.php';
+
         $sqlmain= "select * from schedule inner join doctor on schedule.docid=doctor.docid where schedule.scheduledate>='$today'  order by schedule.scheduledate asc";
         $sqlpt1="";
         $insertkey="";
@@ -117,14 +118,14 @@
                                 if($result->num_rows==0){
                                     echo '<tr>
                                         <td colspan="4">
-                                        <br><br><br><br>
-                                        <center>
-                                        <img src="../img/notfound.svg" width="25%">
-                                        <br>
-                                        <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                        <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher toutes les séances &nbsp;</font></button></a>
-                                        </center>
-                                        <br><br><br><br>
+                                            <br><br><br><br>
+                                            <center>
+                                            <img src="../assets/img/notfound.svg" width="25%">
+                                            <br>
+                                            <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
+                                            <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher toutes les séances &nbsp;</font></button></a>
+                                            </center>
+                                            <br><br><br><br>
                                         </td>
                                     </tr>';
                                 }
@@ -148,21 +149,21 @@
                                             }
                                             echo '
                                             <td style="width: 25%;">
-                                                    <div  class="dashboard-items search-items"  >
-                                                        <div style="width:100%">
-                                                                <div class="h1-search">
-                                                                    '.substr($title,0,21).'
-                                                                </div><br>
-                                                                <div class="h3-search">
-                                                                    '.substr($docname,0,30).'
-                                                                </div>
-                                                                <div class="h4-search">
-                                                                    '.$scheduledate.'<br>Commence: <b>@'.substr($scheduletime,0,5).'</b> (24h)
-                                                                </div>
-                                                                <br>
-                                                                <a href="booking.php?id='.$scheduleid.'" ><button  class="login-btn btn-primary-soft btn "  style="padding-top:11px;padding-bottom:11px;width:100%"><font class="tn-in-text">Reserver Maintenant</font></button></a>
-                                                        </div>      
-                                                    </div>
+                                                <div  class="dashboard-items search-items"  >
+                                                    <div style="width:100%">
+                                                        <div class="h1-search">
+                                                            '.substr($title,0,21).'
+                                                        </div><br>
+                                                        <div class="h3-search">
+                                                            '.substr($docname,0,30).'
+                                                        </div>
+                                                        <div class="h4-search">
+                                                            '.$scheduledate.'<br>Commence: <b>@'.substr($scheduletime,0,5).'</b> (24h)
+                                                        </div>
+                                                        <br>
+                                                        <a href="booking.php?id='.$scheduleid.'" ><button  class="login-btn btn-primary-soft btn "  style="padding-top:11px;padding-bottom:11px;width:100%"><font class="tn-in-text">Réserver Maintenant</font></button></a>
+                                                    </div>      
+                                                </div>
                                             </td>';
                                         }
                                         echo "</tr>";
@@ -199,5 +200,4 @@
             </table>
         </div>
  </div>
-<!--    </div>-->
 <?php include_once '../includes/footer.php'?>

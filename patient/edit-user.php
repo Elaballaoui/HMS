@@ -54,4 +54,4 @@
         $error='3';
     }
     header("location: settings.php?action=edit&error=".$error."&id=".$id);
-    ?>
+ ?>

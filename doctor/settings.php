@@ -40,14 +40,13 @@
                     </td>
                     <td width="15%">
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">Date d'Aujourd'hui</p>
-                            <p class="heading-sub12" style="padding: 0;margin: 0;">
-                                <?php
-                                    date_default_timezone_set('Africa/Casablanca');
-                                    $today = date('d-m-Y');
-
-                                    echo $today;
-                                ?>
-                            </p>
+                        <p class="heading-sub12" style="padding: 0;margin: 0;">
+                            <?php
+                                date_default_timezone_set('Africa/Casablanca');
+                                $today = date('d-m-Y');
+                                echo $today;
+                            ?>
+                        </p>
                     </td>
                     <td width="10%">
                         <button  class="btn-label"  style="display: flex;justify-content: center;align-items: center;"><img src="../assets/img/calendar.svg" width="100%"></button>
@@ -87,7 +86,7 @@
                                             <div class="btn-icon-back dashboard-icons-setting " style="background-image: url('../assets/img/icons/view-iceblue.svg');"></div>
                                             <div>
                                                 <div class="h1-dashboard">Afficher les Détails du Compte</div><br>
-                                                    <div class="h3-dashboard"  style="font-size: 15px;">Afficher les Informations Personnelles sur Votre Compte</div>
+                                                <div class="h3-dashboard"  style="font-size: 15px;">Afficher les Informations Personnelles sur Votre Compte</div>
                                             </div>
                                         </div>
                                     </a>
@@ -130,12 +129,10 @@
                     <center>
                         <h2>Êtes-vous sûr?</h2>
                         <a class="close" href="settings.php">&times;</a>
-                        <div class="content">
-                            Vous souhaitez supprimer cet enregistrement<br>('.substr($nameget,0,40).'). 
-                        </div>
+                        <div class="content">Vous souhaitez supprimer cet enregistrement<br>('.substr($nameget,0,40).'). </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
-                        <a href="settings.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
+                            <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                            <a href="settings.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
                         </div>
                     </center>
                 </div>
@@ -156,12 +153,12 @@
             $tele=$row['doctel'];
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
+                <div class="popup">
                     <center>
-                        <h2></h2>
-                        <a class="close" href="settings.php">&times;</a>
-                        <div class="content">eHospital App<br></div>
-                        <div style="display: flex;justify-content: center;">
+                    <h2></h2>
+                    <a class="close" href="settings.php">&times;</a>
+                    <div class="content">eHospital App<br></div>
+                    <div style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
                             <tr>
                                 <td>
@@ -185,7 +182,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$email.'<br><br>
+                                    '.$email.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -195,7 +192,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$nic.'<br><br>
+                                    '.$nic.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -205,7 +202,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$tele.'<br><br>
+                                    '.$tele.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -215,7 +212,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$spcil_name.'<br><br>
+                                    '.$spcil_name.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -224,10 +221,10 @@
                                 </td>
                             </tr>
                         </table>
-                        </div>
+                    </div>
                     </center>
                     <br><br>
-            </div>
+                </div>
             </div>
             ';
         }elseif($action=='edit'){
@@ -246,8 +243,8 @@
 
             $error_1=$_GET["error"];
                 $errorlist= array(
-                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Already have an account for this Email address.</label>',
-                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>',
+                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Vous avez déjà un compte pour cette adresse e-mail.</label>',
+                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Erreur de confirmation du mot de passe ! Reconfirmer le mot de passe</label>',
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
@@ -270,7 +267,7 @@
                                 <tr>
                                     <td>
                                         <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Modifier les Détails du Médecin.</p>
-                                        ID Médecin : '.$id.' (Auto Génération)<br><br>
+                                        ID Médecin : '.$id.' (Auto Généré)<br><br>
                                     </td>
                                 </tr>
                                 <tr>
@@ -282,8 +279,8 @@
                                 </tr>
                                 <tr>
                                     <td class="label-td" colspan="2">
-                                    <input type="hidden" name="oldemail" value="'.$email.'" >
-                                    <input type="email" name="email" class="input-text" placeholder="Adresse Email" value="'.$email.'" required><br>
+                                        <input type="hidden" name="oldemail" value="'.$email.'" >
+                                        <input type="email" name="email" class="input-text" placeholder="Adresse Email" value="'.$email.'" required><br>
                                     </td>
                                 </tr>
                                 <tr>
@@ -377,14 +374,14 @@
                     <div class="popup">
                         <center>
                         <br><br><br><br>
-                            <h2>Modifier avec Succès!</h2>
-                            <a class="close" href="settings.php">&times;</a>
-                            <div class="content">Si vous modifiez également votre adresse e-mail, veuillez vous déconnecter et vous reconnecter avec votre nouvelle adresse e-mail.</div>
-                            <div style="display: flex;justify-content: center;">
-                                <a href="settings.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
-                                <a href="../logout.php" class="non-style-link"><button  class="btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Se déconnecter&nbsp;&nbsp;</font></button></a>
-                            </div>
-                            <br><br>
+                        <h2>Modifier avec Succès!</h2>
+                        <a class="close" href="settings.php">&times;</a>
+                        <div class="content">Si vous modifiez également votre adresse e-mail, veuillez vous déconnecter et vous reconnecter avec votre nouvelle adresse e-mail.</div>
+                        <div style="display: flex;justify-content: center;">
+                            <a href="settings.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
+                            <a href="../logout.php" class="non-style-link"><button  class="btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Se déconnecter&nbsp;&nbsp;</font></button></a>
+                        </div>
+                        <br><br>
                         </center>
                     </div>
                 </div>

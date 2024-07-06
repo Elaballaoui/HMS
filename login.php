@@ -1,77 +1,72 @@
 <?php
-global $cssLinkList, $pageTitleList;
-require_once __DIR__.'/config/app.php';
-$cssLink=$cssLinkList['login'];
-$pageTitle=$pageTitleList['Connecter'];
-include_once 'includes/header.php';
+    global $cssLinkList, $pageTitleList;
+    require_once __DIR__.'/config/app.php';
+    $cssLink=$cssLinkList['login'];
+    $pageTitle=$pageTitleList['Connecter'];
+    include_once 'includes/header.php';
 
-session_start();
+    session_start();
 
-$_SESSION["user"]="";
-$_SESSION["usertype"]="";
+    $_SESSION["user"]="";
+    $_SESSION["usertype"]="";
 
-// Set the new timezone
-date_default_timezone_set('Asia/Kolkata');
-$date = date('Y-m-d');
+    // Set the new timezone
+    date_default_timezone_set('Africa/Casablanca');
+    $date = date('Y-m-d');
 
-$_SESSION["date"]=$date;
+    $_SESSION["date"]=$date;
 
-//import database
-include("includes/connection.php");
+    //import database
+    include("includes/connection.php");
 
-if($_POST){
+    if($_POST){
+        $email=$_POST['useremail'];
+        $password=$_POST['userpassword'];
+        $error='<label for="promter" class="form-label"></label>';
 
-    $email=$_POST['useremail'];
-    $password=$_POST['userpassword'];
+        $result= $database->query("select * from webuser where email='$email'");
+        if($result->num_rows==1){
+            $utype=$result->fetch_assoc()['usertype'];
+            if ($utype=='p'){
+                $checker = $database->query("select * from patient where pemail='$email' and ppassword='$password'");
+                if ($checker->num_rows==1){
+                    //   Patient dashbord
+                    $_SESSION['user']=$email;
+                    $_SESSION['usertype']='p';
 
-    $error='<label for="promter" class="form-label"></label>';
+                    header('location: patient/index.php');
+                }else{
+                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Informations identification erronées : e-mail ou mot de passe invalide</label>';
+                }
+            }elseif($utype=='a'){
+                $checker = $database->query("select * from admin where aemail='$email' and apassword='$password'");
+                if ($checker->num_rows==1){
+                    //   Admin dashbord
+                    $_SESSION['user']=$email;
+                    $_SESSION['usertype']='a';
 
-    $result= $database->query("select * from webuser where email='$email'");
-    if($result->num_rows==1){
-        $utype=$result->fetch_assoc()['usertype'];
-        if ($utype=='p'){
-            //TODO
-            $checker = $database->query("select * from patient where pemail='$email' and ppassword='$password'");
-            if ($checker->num_rows==1){
-                //   Patient dashbord
-                $_SESSION['user']=$email;
-                $_SESSION['usertype']='p';
+                    header('location: admin/index.php');
+                }else{
+                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Informations identification erronées : e-mail ou mot de passe invalide</label>';
+                }
+            }elseif($utype=='d'){
+                $checker = $database->query("select * from doctor where docemail='$email' and docpassword='$password'");
+                if ($checker->num_rows==1){
+                    //   doctor dashbord
+                    $_SESSION['user']=$email;
+                    $_SESSION['usertype']='d';
 
-                header('location: patient/index.php');
-            }else{
-                $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Informations identification erronées : e-mail ou mot de passe invalide</label>';
+                    header('location: doctor/index.php');
+                }else{
+                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
+                }
             }
-        }elseif($utype=='a'){
-            //TODO
-            $checker = $database->query("select * from admin where aemail='$email' and apassword='$password'");
-            if ($checker->num_rows==1){
-                //   Admin dashbord
-                $_SESSION['user']=$email;
-                $_SESSION['usertype']='a';
-
-                header('location: admin/index.php');
-            }else{
-                $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Informations identification erronées : e-mail ou mot de passe invalide</label>';
-            }
-        }elseif($utype=='d'){
-            //TODO
-            $checker = $database->query("select * from doctor where docemail='$email' and docpassword='$password'");
-            if ($checker->num_rows==1){
-                //   doctor dashbord
-                $_SESSION['user']=$email;
-                $_SESSION['usertype']='d';
-                
-                header('location: doctor/index.php');
-            }else{
-                $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
-            }
+        }else{
+            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">We cant found any acount for this email.</label>';
         }
     }else{
-        $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">We cant found any acount for this email.</label>';
+        $error='<label for="promter" class="form-label">&nbsp;</label>';
     }
-}else{
-    $error='<label for="promter" class="form-label">&nbsp;</label>';
-}
 ?>
 
 <center>
@@ -79,7 +74,7 @@ if($_POST){
         <table border="0" style="margin: 0;padding: 0;width: 60%;">
             <tr>
                 <td>
-                    <p class="header-text">Bienvenue sur eHospital!</p>
+                    <p class="header-text">Bienvenue sur eHospital !</p>
                 </td>
             </tr>
             <div class="form-body">
@@ -89,10 +84,10 @@ if($_POST){
                     </td>
                 </tr>
                 <tr>
-                    <form action="" method="POST" >
-                        <td class="label-td">
-                            <label for="useremail" class="form-label">Email: </label>
-                        </td>
+                <form action="" method="POST" >
+                    <td class="label-td">
+                        <label for="useremail" class="form-label">Email: </label>
+                    </td>
                 </tr>
                 <tr>
                     <td class="label-td">

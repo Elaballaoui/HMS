@@ -52,4 +52,4 @@
     }
 
     header("location: settings.php?action=edit&error=".$error."&id=".$id);
-    ?>
+ ?>

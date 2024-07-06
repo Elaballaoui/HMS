@@ -51,7 +51,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td width="13%" >
-                    <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
+                        <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
                     </td>
                     <td>
                         <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Historique de mes Réservations</p>
@@ -117,14 +117,14 @@
                                 if($result->num_rows==0){
                                     echo '<tr>
                                         <td colspan="7">
-                                        <br><br><br><br>
-                                        <center>
-                                        <img src="../assets/img/notfound.svg" width="25%">
-                                        <br>
-                                        <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                        <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Rendez-vous &nbsp;</font></button></a>
-                                        </center>
-                                        <br><br><br><br>
+                                            <br><br><br><br>
+                                            <center>
+                                            <img src="../assets/img/notfound.svg" width="25%">
+                                            <br>
+                                            <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
+                                            <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Rendez-vous &nbsp;</font></button></a>
+                                            </center>
+                                            <br><br><br><br>
                                         </td>
                                     </tr>';
                                 }
@@ -169,8 +169,8 @@
                                                             <div class="h4-search">
                                                                 Date Planifiée: '.$scheduledate.'<br>Commence: <b>@'.substr($scheduletime,0,5).'</b> (24h)
                                                             </div>
-                                                                <br>
-                                                                <a href="?action=drop&id='.$appoid.'&title='.$title.'&doc='.$docname.'" ><button  class="login-btn btn-primary-soft btn "  style="padding-top:11px;padding-bottom:11px;width:100%"><font class="tn-in-text">Annuler la Réservation</font></button></a>
+                                                            <br>
+                                                            <a href="?action=drop&id='.$appoid.'&title='.$title.'&doc='.$docname.'" ><button  class="login-btn btn-primary-soft btn "  style="padding-top:11px;padding-bottom:11px;width:100%"><font class="tn-in-text">Annuler la Réservation</font></button></a>
                                                         </div>      
                                                     </div>
                                                 </td>';
@@ -239,13 +239,13 @@
                 <div class="popup">
                     <center>
                     <br><br>
-                        <h2>Réservation Réussie.</h2>
-                        <a class="close" href="appointment.php">&times;</a>
-                        <div class="content">Votre Numéro de Rendez-vous est '.$id.'.<br><br>  </div>
-                        <div style="display: flex;justify-content: center;">
+                    <h2>Réservation Réussie.</h2>
+                    <a class="close" href="appointment.php">&times;</a>
+                    <div class="content">Votre Numéro de Rendez-vous est '.$id.'.<br><br>  </div>
+                    <div style="display: flex;justify-content: center;">
                         <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
                         <br><br><br><br>
-                        </div>
+                    </div>
                     </center>
                 </div>
             </div>
@@ -266,8 +266,8 @@
                             Nom du médecin&nbsp; : <b>'.substr($docname,0,40).'</b><br><br>
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-appointment.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;OUI&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
-                        <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
+                            <a href="delete-appointment.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                            <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
                         </div>
                     </center>
                 </div>
@@ -295,84 +295,84 @@
             $tele=$row['doctel'];
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
-                    <center>
-                        <h2></h2>
-                        <a class="close" href="doctors.php">&times;</a>
-                        <div class="content">
-                            <strong>eHospital App</strong> <br>
-                        </div>
-                        <div style="display: flex;justify-content: center;">
-                        <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
-                            <tr>
-                                <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Voir les Détails.</p><br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Nom Complet: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    '.$name.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="Email" class="form-label">Email: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$email.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">CIN: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$nic.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Téléphone: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$tele.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Spécialités: </label>
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$spcil_name.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a> 
-                                </td>
-                            </tr>
-                        </table>
-                        </div>
-                    </center>
-                    <br><br>
+                <div class="popup">
+                <center>
+                    <h2></h2>
+                    <a class="close" href="doctors.php">&times;</a>
+                    <div class="content">
+                        <strong>eHospital App</strong> <br>
+                    </div>
+                    <div style="display: flex;justify-content: center;">
+                    <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
+                        <tr>
+                            <td>
+                                <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Voir les Détails.</p><br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="name" class="form-label">Nom Complet: </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                '.$name.'<br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="Email" class="form-label">Email: </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                            '.$email.'<br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="nic" class="form-label">CIN: </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                            '.$nic.'<br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="Tele" class="form-label">Téléphone: </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                            '.$tele.'<br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="spec" class="form-label">Spécialités: </label>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                            '.$spcil_name.'<br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a> 
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                </center>
+                <br><br>
             </div>
             </div>
             ';  
     }
 }
-    ?>
+ ?>
 <?php include_once '../includes/footer.php'?>

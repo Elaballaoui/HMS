@@ -1,27 +1,22 @@
 <?php
-global $pageTitleList, $cssLinkList;
-require_once __DIR__.'/config/app.php';
-$cssLink=$cssLinkList['index'];
-$pageTitle=$pageTitleList['Accueil'];
-include_once 'includes/header.php';
+    global $pageTitleList, $cssLinkList;
+    require_once __DIR__.'/config/app.php';
+    $cssLink=$cssLinkList['index'];
+    $pageTitle=$pageTitleList['Accueil'];
+    include_once 'includes/header.php';
 ?>
 
 <div class="full-height">
     <table border="0">
         <tr>
             <td width="80%">
-                <font class="edoc-logo">eHospital. </font>
+                <font class="edoc-logo">eHospital.</font>
             </td>
             <td width="10%">
-                <a href="login.php" class="non-style-link"
-                ><p class="nav-item">SE CONNECTER</p></a>
+                <a href="login.php" class="non-style-link"><p class="nav-item">SE CONNECTER</p></a>
             </td>
             <td width="10%">
-                <a href="signup.php" class="non-style-link">
-                    <p class="nav-item" style="padding-right: 10px">
-                        S'INSCRIRE
-                    </p>
-                </a>
+                <a href="signup.php" class="non-style-link"><p class="nav-item" style="padding-right: 10px">S'INSCRIRE</p></a>
             </td>
         </tr>
         <tr>
@@ -55,5 +50,4 @@ include_once 'includes/header.php';
         </tr>
     </table>
 </div>
-
 <?php include_once 'includes/footer.php'?>

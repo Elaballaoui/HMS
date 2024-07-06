@@ -71,18 +71,18 @@
                     <td colspan="4" style="padding-top:0px;width: 100%;" >
                         <center>
                         <table class="filter-container" border="0" >
-                        <tr>
-                            <td width="10%"></td>
-                            <td width="5%" style="text-align: center;">Date:</td>
-                            <td width="30%">
-                            <form action="" method="post">
-                                <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
-                            </td>
-                            <td width="12%">
-                                <input type="submit"  name="filter" value="Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
-                            </form>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td width="10%"></td>
+                                <td width="5%" style="text-align: center;">Date:</td>
+                                <td width="30%">
+                                <form action="" method="post">
+                                    <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
+                                </td>
+                                <td width="12%">
+                                    <input type="submit"  name="filter" value="Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
+                                </form>
+                                </td>
+                            </tr>
                         </table>
                         </center>
                     </td>
@@ -120,17 +120,17 @@
 
                                 if($result->num_rows==0){
                                     echo '<tr>
-                                    <td colspan="7">
-                                    <br><br><br><br>
-                                    <center>
-                                    <img src="../assets/img/notfound.svg" width="25%">
-                                    <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                    <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp;Afficher tous Réservation&nbsp;</font></button>
-                                    </a>
-                                    </center>
-                                    <br><br><br><br>
-                                    </td>
+                                        <td colspan="7">
+                                            <br><br><br><br>
+                                            <center>
+                                            <img src="../assets/img/notfound.svg" width="25%">
+                                            <br>
+                                            <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
+                                            <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp;Afficher tous Réservation&nbsp;</font></button>
+                                            </a>
+                                            </center>
+                                            <br><br><br><br>
+                                        </td>
                                     </tr>';
                                 }
                                 else{
@@ -147,13 +147,13 @@
                                     $appodate=$row["appodate"];
                                     echo '<tr >
                                         <td style="font-weight:600;"> &nbsp;'.
-                                        substr($pname,0,25)
+                                            substr($pname,0,25)
                                         .'</td >
                                         <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
-                                        '.$apponum.'
+                                            '.$apponum.'
                                         </td>
                                         <td>
-                                        '.substr($title,0,15).'
+                                            '.substr($title,0,15).'
                                         </td>
                                         <td style="text-align:center;;">
                                             '.substr($scheduledate,0,10).' @'.substr($scheduletime,0,5).'
@@ -194,16 +194,16 @@
                         <div style="display: flex;justify-content: center;">
                         <div class="abc">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
-                        <tr>
-                            <td class="label-td" colspan="2">'.
-                                   ""
-                            .'</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Ajouter Nouvelle Séance.</p><br>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">'.
+                                       ""
+                                .'</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Ajouter Nouvelle Séance.</p><br>
+                                </td>
+                            </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
                                 <form action="add-session.php" method="POST" class="add-new-form">
@@ -285,20 +285,20 @@
             $titleget=$_GET["title"];
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
+                <div class="popup">
                     <center>
                     <br><br>
-                        <h2>Session placée.</h2>
-                        <a class="close" href="schedule.php">&times;</a>
-                        <div class="content">
+                    <h2>Session placée.</h2>
+                    <a class="close" href="schedule.php">&times;</a>
+                    <div class="content">
                         '.substr($titleget,0,40).' était prévue.<br><br>
-                        </div>
-                        <div style="display: flex;justify-content: center;">
+                    </div>
+                    <div style="display: flex;justify-content: center;">
                         <a href="schedule.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
                         <br><br><br><br>
-                        </div>
+                    </div>
                     </center>
-            </div>
+                </div>
             </div>
             ';
         }elseif($action=='drop'){
@@ -307,7 +307,7 @@
             $apponum=$_GET["apponum"];
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
+                <div class="popup">
                     <center>
                         <h2>Êtes-vous sûr?</h2>
                         <a class="close" href="appointment.php">&times;</a>
@@ -317,11 +317,11 @@
                             Numéro de réservation : <b>'.substr($apponum,0,40).'</b><br><br>
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-appointment.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
-                        <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
+                            <a href="delete-appointment.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                            <a href="appointment.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
                         </div>
                     </center>
-            </div>
+                </div>
             </div>
             '; 
         }elseif($action=='view'){
@@ -343,9 +343,7 @@
                     <center>
                         <h2></h2>
                         <a class="close" href="doctors.php">&times;</a>
-                        <div class="content">
-                            eHospital App<br>
-                        </div>
+                        <div class="content">eHospital App<br></div>
                         <div style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
                             <tr>
@@ -370,7 +368,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$email.'<br><br>
+                                    '.$email.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -380,7 +378,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$nic.'<br><br>
+                                    '.$nic.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -399,9 +397,9 @@
                                 </td>
                             </tr>
                             <tr>
-                            <td class="label-td" colspan="2">
-                            '.$spcil_name.'<br><br>
-                            </td>
+                                <td class="label-td" colspan="2">
+                                    '.$spcil_name.'<br><br>
+                                </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
@@ -418,5 +416,4 @@
     }
 }
     ?>
-<!--    </div>-->
 <?php include_once '../includes/footer.php' ?>

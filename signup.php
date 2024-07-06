@@ -1,32 +1,32 @@
 <?php
-global $cssLinkList, $pageTitleList;
-require_once __DIR__.'/config/app.php';
-$cssLink=$cssLinkList['signup'];
-$pageTitle=$pageTitleList['Inscrire'];
-include_once 'includes/header.php';
+    global $cssLinkList, $pageTitleList;
+    require_once __DIR__.'/config/app.php';
+    $cssLink=$cssLinkList['signup'];
+    $pageTitle=$pageTitleList['Inscrire'];
+    include_once 'includes/header.php';
 
-session_start();
+    session_start();
 
-$_SESSION["user"]="";
-$_SESSION["usertype"]="";
+    $_SESSION["user"]="";
+    $_SESSION["usertype"]="";
 
-// Set the new timezone
-date_default_timezone_set('Asia/Kolkata');
-$date = date('Y-m-d');
+    // Set the new timezone
+    date_default_timezone_set('Africa/Casablanca');
+    $date = date('Y-m-d');
 
-$_SESSION["date"]=$date;
+    $_SESSION["date"]=$date;
 
-if($_POST){
-    $_SESSION["personal"]=array(
-        'fname'=>$_POST['fname'],
-        'lname'=>$_POST['lname'],
-        'address'=>$_POST['address'],
-        'nic'=>$_POST['nic'],
-        'dob'=>$_POST['dob']
-    );
-    print_r($_SESSION["personal"]);
-    header("location: create-account.php");
-}
+    if($_POST){
+        $_SESSION["personal"]=array(
+            'fname'=>$_POST['fname'],
+            'lname'=>$_POST['lname'],
+            'address'=>$_POST['address'],
+            'nic'=>$_POST['nic'],
+            'dob'=>$_POST['dob']
+        );
+        print_r($_SESSION["personal"]);
+        header("location: create-account.php");
+    }
 ?>
 
 <center>
@@ -39,10 +39,10 @@ if($_POST){
                 </td>
             </tr>
             <tr>
-                <form action="" method="POST" >
-                    <td class="label-td" colspan="2">
-                        <label for="name" class="form-label">Nom complet: </label>
-                    </td>
+            <form action="" method="POST" >
+                <td class="label-td" colspan="2">
+                    <label for="name" class="form-label">Nom complet: </label>
+                </td>
             </tr>
             <tr>
                 <td class="label-td">
@@ -102,7 +102,7 @@ if($_POST){
                     <br><br><br>
                 </td>
             </tr>
-                </form>
+            </form>
             </tr>
         </table>
     </div>

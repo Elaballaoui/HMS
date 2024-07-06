@@ -44,7 +44,6 @@
                                 date_default_timezone_set('Africa/Casablanca');
                                 $today = date('d-m-Y');
                                 echo $today;
-
                                 $list110 = $database->query("select  * from  schedule where docid=$userid;");
                             ?>
                         </p>
@@ -108,17 +107,16 @@
 
                                 if($result->num_rows==0){
                                     echo '<tr>
-                                    <td colspan="4">
-                                    <br><br><br><br>
-                                    <center>
-                                    <img src="../assets/img/notfound.svg" width="25%">
-                                    <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher Toutes les Séances &nbsp;</font></button>
-                                    </a>
-                                    </center>
-                                    <br><br><br><br>
-                                    </td>
+                                        <td colspan="4">
+                                            <br><br><br><br>
+                                            <center>
+                                            <img src="../assets/img/notfound.svg" width="25%">
+                                            <br>
+                                            <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
+                                            <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher Toutes les Séances &nbsp;</font></button></a>
+                                            </center>
+                                            <br><br><br><br>
+                                        </td>
                                     </tr>';
                                 }else{
                                     for ( $x=0; $x<$result->num_rows;$x++){
@@ -140,10 +138,10 @@
                                                 '.$nop.'
                                             </td>
                                             <td>
-                                            <div style="display:flex;justify-content: center;">
-                                            <a href="?action=view&id='.$scheduleid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Voir</font></button></a>                                           
-                                            <a href="?action=drop&id='.$scheduleid.'&name='.$title.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Annuler Séance</font></button></a>
-                                            </div>
+                                                <div style="display:flex;justify-content: center;">
+                                                    <a href="?action=view&id='.$scheduleid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Voir</font></button></a>                                           
+                                                    <a href="?action=drop&id='.$scheduleid.'&name='.$title.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Annuler Séance</font></button></a>
+                                                </div>
                                             </td>
                                         </tr>';
                                     }
@@ -166,19 +164,17 @@
             $nameget=$_GET["name"];
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup">
-                    <center>
-                        <h2>Êtes-vous sûr?</h2>
-                        <a class="close" href="schedule.php">&times;</a>
-                        <div class="content">
-                            Vous souhaitez supprimer cet enregistrement<br>('.substr($nameget,0,40).').
-                        </div>
-                        <div style="display: flex;justify-content: center;">
-                        <a href="delete-session.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
-                        <a href="schedule.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
-                    </div>
-                    </center>
-            </div>
+                <div class="popup">
+                <center>
+                <h2>Êtes-vous sûr?</h2>
+                <a class="close" href="schedule.php">&times;</a>
+                <div class="content">Vous souhaitez supprimer cet enregistrement<br>('.substr($nameget,0,40).').</div>
+                <div style="display: flex;justify-content: center;">
+                    <a href="delete-session.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                    <a href="schedule.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
+                </div>
+                </center>
+                </div>
             </div>
             '; 
         }elseif($action=='view'){
@@ -197,135 +193,134 @@
             $result12= $database->query($sqlmain12);
             echo '
             <div id="popup1" class="overlay">
-                    <div class="popup" style="width: 70%;">
-                    <center>
-                        <h2></h2>
-                        <a class="close" href="schedule.php">&times;</a>
-                        <div class="content"></div>
-                        <div class="abc scroll" style="display: flex;justify-content: center;">
-                        <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
-                            <tr>
-                                <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Afficher les Détails.</p><br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Titre de Séance: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    '.$title.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="Email" class="form-label">Docteur de cette séance: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
+                <div class="popup" style="width: 70%;">
+                <center>
+                    <h2></h2>
+                    <a class="close" href="schedule.php">&times;</a>
+                    <div class="content"></div>
+                    <div class="abc scroll" style="display: flex;justify-content: center;">
+                    <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
+                        <tr>
+                            <td>
+                                <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Afficher les Détails.</p><br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="name" class="form-label">Titre de Séance: </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                '.$title.'<br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="Email" class="form-label">Médecin de cette séance: </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
                                 '.$docname.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">Date Prévue: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="nic" class="form-label">Date Prévue: </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
                                 '.$scheduledate.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Heure Prévue: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="Tele" class="form-label">Heure Prévue: </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
                                 '.$scheduletime.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label"><b>Patients déjà inscrits à cette session:</b> ('.$result12->num_rows."/".$nop.')</label>
-                                    <br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                            <td colspan="4">
-                                <center>
-                                 <div class="abc scroll">
-                                 <table width="100%" class="sub-table scrolldown" border="0">
-                                 <thead>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-td" colspan="2">
+                                <label for="spec" class="form-label"><b>Patients déjà inscrits à cette session:</b> ('.$result12->num_rows."/".$nop.')</label>
+                                <br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td colspan="4">
+                            <center>
+                             <div class="abc scroll">
+                             <table width="100%" class="sub-table scrolldown" border="0">
+                             <thead>
                                  <tr>   
                                     <th class="table-headin">ID Patient</th>
                                     <th class="table-headin">Nom Patient</th>
                                     <th class="table-headin">Numéro de réservation</th>   
                                     <th class="table-headin">Téléphone Patient</th> 
-                                 </thead>
-                                 <tbody>';
+                                   </tr>
+                             </thead>
+                             <tbody>';
 
-                                         $result= $database->query($sqlmain12);
-                
-                                         if($result->num_rows==0){
-                                             echo '<tr>
+                                     $result= $database->query($sqlmain12);
+
+                                     if($result->num_rows==0){
+                                         echo '<tr>
                                              <td colspan="7">
-                                             <br><br><br><br>
-                                             <center>
-                                             <img src="../assets/img/notfound.svg" width="25%">
-                                             <br>
-                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                             <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les réservations &nbsp;</font></button>
-                                             </a>
-                                             </center>
-                                             <br><br><br><br>
+                                                 <br><br><br><br>
+                                                 <center>
+                                                 <img src="../assets/img/notfound.svg" width="25%">
+                                                 <br>
+                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
+                                                    <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les réservations &nbsp;</font></button></a>
+                                                 </center>
+                                                 <br><br><br><br>
                                              </td>
+                                         </tr>';
+                                     }
+                                     else{
+                                         for ( $x=0; $x<$result->num_rows;$x++){
+                                             $row=$result->fetch_assoc();
+                                             $apponum=$row["apponum"];
+                                             $pid=$row["pid"];
+                                             $pname=$row["pname"];
+                                             $ptel=$row["ptel"];
+
+                                             echo '<tr style="text-align:center;">
+                                                <td>
+                                                    '.substr($pid,0,15).'
+                                                </td>
+                                                 <td style="font-weight:600;padding:25px">'.
+                                                    substr($pname,0,25)
+                                                 .'</td >
+                                                 <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
+                                                    '.$apponum.'
+                                                 </td>
+                                                 <td>
+                                                    '.substr($ptel,0,25).'
+                                                 </td>
                                              </tr>';
                                          }
-                                         else{
-                                             for ( $x=0; $x<$result->num_rows;$x++){
-                                                 $row=$result->fetch_assoc();
-                                                 $apponum=$row["apponum"];
-                                                 $pid=$row["pid"];
-                                                 $pname=$row["pname"];
-                                                 $ptel=$row["ptel"];
+                                         }
 
-                                                 echo '<tr style="text-align:center;">
-                                                    <td>
-                                                    '.substr($pid,0,15).'
-                                                    </td>
-                                                     <td style="font-weight:600;padding:25px">'.
-                                                     substr($pname,0,25)
-                                                     .'</td >
-                                                     <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
-                                                     '.$apponum.'
-                                                     </td>
-                                                     <td>
-                                                     '.substr($ptel,0,25).'
-                                                     </td>
-                                                 </tr>';
-                                             }
-                                     }
-                
-                                    echo '</tbody>
-                                 </table>
-                                 </div>
-                                 </center>
-                            </td> 
-                         </tr>
-                        </table>
-                        </div>
-                    </center>
-                    <br><br>
-            </div>
+                                echo '</tbody>
+                             </table>
+                             </div>
+                             </center>
+                        </td> 
+                     </tr>
+                    </table>
+                    </div>
+                </center>
+                <br><br>
+                </div>
             </div>
             ';  
     }
 }
     ?>
-<!--    </div>-->
  <?php include_once '../includes/footer.php' ?>

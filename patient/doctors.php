@@ -32,7 +32,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr>
                     <td width="13%">
-                        <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
+                        <a href="index.php" ><button class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
                     </td>
                     <td>
                         <form action="" method="post" class="header-search">
@@ -76,11 +76,9 @@
                 <?php
                     if($_POST){
                         $keyword=$_POST["search"];
-                        
                         $sqlmain= "select * from doctor where docemail='$keyword' or docname='$keyword' or docname like '$keyword%' or docname like '%$keyword' or docname like '%$keyword%'";
                     }else{
                         $sqlmain= "select * from doctor order by docid desc";
-
                     }
                 ?>
                 <tr>
@@ -108,15 +106,14 @@
                                             <img src="../assets/img/notfound.svg" width="25%">
                                             <br>
                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                            <a class="non-style-link" href="doctors.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Médecins &nbsp;</font></button>
-                                            </a>
+                                            <a class="non-style-link" href="doctors.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Médecins &nbsp;</font></button></a>
                                             </center>
                                             <br><br><br><br>
                                         </td>
                                     </tr>';
                                 }
                                 else{
-                                for ( $x=0; $x<$result->num_rows;$x++){
+                                for ($x=0; $x<$result->num_rows;$x++){
                                     $row=$result->fetch_assoc();
                                     $docid=$row["docid"];
                                     $name=$row["docname"];
@@ -137,8 +134,7 @@
                                         </td>
                                         <td>
                                             <div style="display:flex;justify-content: center;">
-                                                <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Voire</font></button></a>
-                                       &nbsp;&nbsp;&nbsp;
+                                                <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Voire</font></button></a>&nbsp;&nbsp;
                                                 <a href="?action=session&id='.$docid.'&name='.$name.'"  class="non-style-link"><button  class="btn-primary-soft btn button-icon menu-icon-session-active"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Séances</font></button></a>
                                             </div>
                                         </td>
@@ -203,7 +199,7 @@
                         <h2></h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            <strong>eHospital</strong><br>
+                            <strong>eHospital App</strong><br>
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
@@ -229,7 +225,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$email.'<br><br>
+                                    '.$email.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -239,7 +235,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$nic.'<br><br>
+                                    '.$nic.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -249,7 +245,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$tele.'<br><br>
+                                    '.$tele.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -300,11 +296,11 @@
             $stmt->execute();
             $result = $stmt->get_result();
             $row=$result->fetch_assoc();
-       
+
             $name=$row["docname"];
             $email=$row["docemail"];
             $spe=$row["specialties"];
-            
+
             $sqlmain= "select sname from specialties where id='?";
             $stmt = $database->prepare($sqlmain);
             $stmt->bind_param("s",$spe);
@@ -318,8 +314,8 @@
 
             $error_1=$_GET["error"];
             $errorlist= array(
-                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Already have an account for this Email address.</label>',
-                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>',
+                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Vous avez déjà un compte pour cette adresse e-mail.</label>',
+                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Erreur de confirmation du mot de passe ! Reconfirmer le mot de passe</label>',
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
@@ -342,7 +338,7 @@
                                     <tr>
                                         <td>
                                             <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Modifier les Détails du Médecin.</p>
-                                            ID Doctor : '.$id.' (Auto Généré)<br><br>
+                                            Médecin ID : '.$id.' (Auto Généré)<br><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -354,7 +350,7 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                        <input type="email" name="email" class="input-text" placeholder="Adresse Email" value="'.$email.'" required><br>
+                                            <input type="email" name="email" class="input-text" placeholder="Adresse Email" value="'.$email.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -396,7 +392,7 @@
                                         <td class="label-td" colspan="2">
                                             <select name="spec" id="" class="box">';
                                                 $list11 = $database->query("select  * from  specialties;");
-                
+
                                                 for ($y=0;$y<$list11->num_rows;$y++){
                                                     $row00=$list11->fetch_assoc();
                                                     $sn=$row00["sname"];
@@ -452,8 +448,8 @@
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
                         </div>
-                        <div style="display: flex;justify-content: center;">
-                        <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
+                            <div style="display: flex;justify-content: center;">
+                            <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
                         </div>
                         <br><br>
                     </center>
@@ -463,5 +459,4 @@
             };
     };
 ?>
-</div>
 <?php include_once '../includes/footer.php'; ?>
