@@ -24,7 +24,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td width="13%" >
-                    <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
+                        <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
                     </td>
                     <td>
                         <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Gestion du Calendrier</p>
@@ -62,7 +62,7 @@
                         <center>
                         <table class="filter-container" border="0" >
                         <tr>
-                           <td width="10%"></td>
+                            <td width="10%"></td>
                             <td width="5%" style="text-align: center;">
                                 Date:
                             </td>
@@ -87,11 +87,11 @@
                                         }
                                         ?>
                                 </select>
-                        </td>
-                        <td width="12%">
-                            <input type="submit" name="filter" value="Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
-                            </form>
-                        </td>
+                            </td>
+                            <td width="12%">
+                                <input type="submit" name="filter" value="Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
+                                </form>
+                            </td>
                         </tr>
                         </table>
                         </center>
@@ -118,7 +118,6 @@
                         $sqlkeywords=array(" where "," and ");
                         $key2=0;
                         foreach($sqllist as $key){
-
                             if(!empty($key)){
                                 $sqlmain.=$sqlkeywords[$key2].$key;
                                 $key2++;
@@ -155,8 +154,7 @@
                                             <img src="../assets/img/notfound.svg" width="25%">
                                             <br>
                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                            <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher Toutes les Séances &nbsp;</font></button>
-                                            </a>
+                                            <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher Toutes les Séances &nbsp;</font></button></a>
                                             </center>
                                             <br><br><br><br>
                                         </td>
@@ -172,10 +170,10 @@
                                     $nop=$row["nop"];
                                     echo '<tr>
                                         <td> &nbsp;'.
-                                        substr($title,0,30)
+                                            substr($title,0,30)
                                         .'</td>
                                         <td>
-                                        '.substr($docname,0,20).'
+                                            '.substr($docname,0,20).'
                                         </td>
                                         <td style="text-align:center;">
                                             '.substr($scheduledate,0,10).' '.substr($scheduletime,0,5).'
@@ -184,11 +182,10 @@
                                             '.$nop.'
                                         </td>
                                         <td>
-                                        <div style="display:flex;justify-content: center;">
-                                        <a href="?action=view&id='.$scheduleid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Voir</font></button></a>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <a href="?action=drop&id='.$scheduleid.'&name='.$title.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Supprimer</font></button></a>
-                                        </div>
+                                            <div style="display:flex;justify-content: center;">
+                                                <a href="?action=view&id='.$scheduleid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Voir</font></button></a>&nbsp;&nbsp;
+                                                <a href="?action=drop&id='.$scheduleid.'&name='.$title.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Supprimer</font></button></a>
+                                            </div>
                                         </td>
                                     </tr>';
                                 }
@@ -257,7 +254,7 @@
                                             echo "<option value=".$id00.">$sn</option><br/>";
                                         }
                                         
-                        echo     '       </select><br><br>
+                        echo     '  </select><br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -316,11 +313,11 @@
                         <h2>Session Placée.</h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                        '.substr($titleget,0,40).' était prévue.<br><br>
+                            '.substr($titleget,0,40).' était prévue.<br><br>
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="schedule.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
-                        <br><br><br><br>
+                            <a href="schedule.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
+                            <br><br><br><br>
                         </div>
                     </center>
                 </div>
@@ -406,7 +403,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$scheduletime.'<br><br>
+                                    '.$scheduletime.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -420,56 +417,54 @@
                                 <center>
                                  <div class="abc scroll">
                                  <table width="100%" class="sub-table scrolldown" border="0">
-                                 <thead>
-                                 <tr>   
-                                    <th class="table-headin">ID Patient</th>
-                                    <th class="table-headin">Nom Patient</th>
-                                    <th class="table-headin">Numéro de rendez-vous</th>
-                                    <th class="table-headin">Téléphone Patient</th>
-                                 </thead>
-                                 <tbody>';
-                                         $result= $database->query($sqlmain12);
-                
-                                         if($result->num_rows==0){
-                                             echo '<tr>
-                                                 <td colspan="7">
-                                                     <br><br><br><br>
-                                                     <center>
-                                                     <img src="../assets/img/notfound.svg" width="25%">
-                                                     <br>
-                                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                                     <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Rendez-vous &nbsp;</font></button>
-                                                     </a>
-                                                     </center>
-                                                     <br><br><br><br>
-                                                 </td>
-                                             </tr>';
-                                         }else{
-                                             for ( $x=0; $x<$result->num_rows;$x++){
-                                                 $row=$result->fetch_assoc();
-                                                 $apponum=$row["apponum"];
-                                                 $pid=$row["pid"];
-                                                 $pname=$row["pname"];
-                                                 $ptel=$row["ptel"];
+                                     <thead>
+                                     <tr>   
+                                        <th class="table-headin">ID Patient</th>
+                                        <th class="table-headin">Nom Patient</th>
+                                        <th class="table-headin">Numéro de rendez-vous</th>
+                                        <th class="table-headin">Téléphone Patient</th>
+                                     </thead>
+                                     <tbody>';
+                                             $result= $database->query($sqlmain12);
 
-                                                 echo '<tr style="text-align:center;">
-                                                     <td>
-                                                        '.substr($pid,0,15).'
-                                                     </td>
-                                                     <td style="font-weight:600;padding:25px">'.
-                                                        substr($pname,0,25)
-                                                     .'</td >
-                                                     <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
-                                                        '.$apponum.'
-                                                     </td>
-                                                     <td>
-                                                        '.substr($ptel,0,25).'
+                                             if($result->num_rows==0){
+                                                 echo '<tr>
+                                                     <td colspan="7">
+                                                         <br><br><br><br>
+                                                         <center>
+                                                         <img src="../assets/img/notfound.svg" width="25%">
+                                                         <br>
+                                                         <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
+                                                         <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher tous les Rendez-vous &nbsp;</font></button></a>
+                                                         </center>
+                                                         <br><br><br><br>
                                                      </td>
                                                  </tr>';
+                                             }else{
+                                                 for ( $x=0; $x<$result->num_rows;$x++){
+                                                     $row=$result->fetch_assoc();
+                                                     $apponum=$row["apponum"];
+                                                     $pid=$row["pid"];
+                                                     $pname=$row["pname"];
+                                                     $ptel=$row["ptel"];
+
+                                                     echo '<tr style="text-align:center;">
+                                                         <td>
+                                                            '.substr($pid,0,15).'
+                                                         </td>
+                                                         <td style="font-weight:600;padding:25px">'.
+                                                            substr($pname,0,25)
+                                                         .'</td >
+                                                         <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
+                                                            '.$apponum.'
+                                                         </td>
+                                                         <td>
+                                                            '.substr($ptel,0,25).'
+                                                         </td>
+                                                     </tr>';
+                                                 }
                                              }
-                                         }
-                                         echo '</tbody>
-                
+                                 echo '</tbody>
                                  </table>
                                  </div>
                                  </center>

@@ -21,4 +21,4 @@
 
         header("location: appointment.php");
     }
-?>
+    ?>

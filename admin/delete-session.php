@@ -22,4 +22,4 @@
 
         header("location: schedule.php");
     }
-?>
+    ?>

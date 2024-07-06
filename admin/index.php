@@ -76,9 +76,7 @@
                                 <td style="width: 25%;">
                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex">
                                         <div>
-                                            <div class="h1-dashboard">
-                                                <?php    echo $doctorrow->num_rows  ?>
-                                            </div><br>
+                                            <div class="h1-dashboard"><?php echo $doctorrow->num_rows ?></div><br>
                                             <div class="h3-dashboard">Médecins &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                         </div>
                                         <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/doctors-hover.svg');"></div>
@@ -87,9 +85,7 @@
                                 <td style="width: 25%;">
                                     <div class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                         <div>
-                                            <div class="h1-dashboard">
-                                                <?php    echo $patientrow->num_rows  ?>
-                                            </div><br>
+                                            <div class="h1-dashboard"><?php echo $patientrow->num_rows ?></div><br>
                                             <div class="h3-dashboard">Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                         </div>
                                         <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/patients-hover.svg');"></div>
@@ -98,9 +94,7 @@
                                 <td style="width: 25%;">
                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex; ">
                                         <div>
-                                            <div class="h1-dashboard" >
-                                                <?php echo $appointmentrow ->num_rows  ?>
-                                            </div><br>
+                                            <div class="h1-dashboard" ><?php echo $appointmentrow ->num_rows ?></div><br>
                                             <div class="h3-dashboard">Nouvelle Réservation&nbsp;&nbsp;</div>
                                         </div>
                                         <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../assets/img/icons/book-hover.svg');"></div>
@@ -109,9 +103,7 @@
                                 <td style="width: 25%;">
                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;padding-top:26px;padding-bottom:26px;">
                                         <div>
-                                            <div class="h1-dashboard">
-                                                <?php    echo $schedulerow ->num_rows  ?>
-                                            </div><br>
+                                            <div class="h1-dashboard"><?php echo $schedulerow ->num_rows ?></div><br>
                                             <div class="h3-dashboard" style="font-size: 15px">Séances D'aujourd'hui</div>
                                         </div>
                                         <div class="btn-icon-back dashboard-icons" style="background-image: url('../assets/img/icons/session-iceblue.svg');"></div>
@@ -172,8 +164,7 @@
                                                             <img src="../assets/img/notfound.svg" width="25%">
                                                             <br>
                                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                                            <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher Tous les Rendez-vous &nbsp;</font></button>
-                                                            </a>
+                                                            <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher Tous les Rendez-vous &nbsp;</font></button></a>
                                                             </center>
                                                             <br><br><br><br>
                                                         </td>
@@ -197,12 +188,12 @@
                                                             </td>
                                                             <td style="font-weight:600;"> &nbsp;'.
                                                             substr($pname,0,25)
-                                                            .'</td >
+                                                                .'</td >
                                                             <td style="font-weight:600;"> &nbsp;'.
                                                                 substr($docname,0,25)
                                                             .'</td >
                                                             <td>
-                                                            '.substr($title,0,15).'
+                                                                '.substr($title,0,15).'
                                                             </td>
                                                         </tr>';
                                                     }
@@ -238,8 +229,7 @@
                                                             <img src="../assets/img/notfound.svg" width="25%">
                                                             <br>
                                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nous avons rien trouvé en rapport avec vos mots clés !</p>
-                                                            <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher Toutes les Séances &nbsp;</font></button>
-                                                            </a>
+                                                            <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Afficher Toutes les Séances &nbsp;</font></button></a>
                                                             </center>
                                                             <br><br><br><br>
                                                         </td>
@@ -256,17 +246,17 @@
                                                         $nop=$row["nop"];
                                                         echo '<tr>
                                                             <td style="padding:20px;"> &nbsp;'.
-                                                            substr($title,0,30)
+                                                                substr($title,0,30)
                                                             .'</td>
                                                             <td>
-                                                            '.substr($docname,0,20).'
+                                                                '.substr($docname,0,20).'
                                                             </td>
                                                             <td style="text-align:center;">
                                                                 '.substr($scheduledate,0,10).' '.substr($scheduletime,0,5).'
                                                             </td>
                                                         </tr>';
                                                     }
-                                            }
+                                                }
                                             ?>
                                         </tbody>
                                         </table>

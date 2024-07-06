@@ -23,7 +23,7 @@
         <?php include_once '../includes/adminSidebar.php'?>
         <div class="dash-body">
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
-                <tr >
+                <tr>
                     <td width="13%" >
                         <a href="index.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Retour</font></button></a>
                     </td>
@@ -60,41 +60,41 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="4" style="padding-top:0px;width: 100%;" >
+                    <td colspan="4" style="padding-top:0px;width: 100%;">
                         <center>
                         <table class="filter-container" border="0" >
-                        <tr>
-                           <td width="10%"></td>
-                        <td width="5%" style="text-align: center;">
-                            Date:
-                        </td>
-                        <td width="30%">
-                        <form action="" method="post">
-                            <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
-                        </td>
-                        <td width="5%" style="text-align: center;">
-                            Médecin:
-                        </td>
-                        <td width="30%">
-                            <select name="docid" id="" class="box filter-container-items" style="width:90% ;height: 37px;margin: 0;" >
-                                <option value="" disabled selected hidden>Choisissez le Nom du Médecin dans la liste</option><br/>
-                                <?php
-                                    $list11 = $database->query("select  * from  doctor order by docname asc;");
+                            <tr>
+                               <td width="10%"></td>
+                                <td width="5%" style="text-align: center;">
+                                    Date:
+                                </td>
+                                <td width="30%">
+                                <form action="" method="post">
+                                    <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
+                                </td>
+                                <td width="5%" style="text-align: center;">
+                                    Médecin:
+                                </td>
+                                <td width="30%">
+                                    <select name="docid" id="" class="box filter-container-items" style="width:90% ;height: 37px;margin: 0;" >
+                                        <option value="" disabled selected hidden>Choisissez le Nom du Médecin dans la liste</option><br/>
+                                        <?php
+                                            $list11 = $database->query("select  * from  doctor order by docname asc;");
 
-                                    for ($y=0;$y<$list11->num_rows;$y++){
-                                        $row00=$list11->fetch_assoc();
-                                        $sn=$row00["docname"];
-                                        $id00=$row00["docid"];
-                                        echo "<option value=".$id00.">$sn</option><br/>";
-                                    }
-                                    ?>
-                            </select>
-                        </td>
-                        <td width="12%">
-                            <input type="submit"  name="filter" value="Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
-                            </form>
-                        </td>
-                        </tr>
+                                            for ($y=0;$y<$list11->num_rows;$y++){
+                                                $row00=$list11->fetch_assoc();
+                                                $sn=$row00["docname"];
+                                                $id00=$row00["docid"];
+                                                echo "<option value=".$id00.">$sn</option><br/>";
+                                            }
+                                            ?>
+                                    </select>
+                                </td>
+                                <td width="12%">
+                                    <input type="submit"  name="filter" value="Filtre" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
+                                    </form>
+                                </td>
+                            </tr>
                         </table>
                         </center>
                     </td>
@@ -119,7 +119,6 @@
                         $sqlkeywords=array(" where "," and ");
                         $key2=0;
                         foreach($sqllist as $key){
-
                             if(!empty($key)){
                                 $sqlmain.=$sqlkeywords[$key2].$key;
                                 $key2++;
@@ -136,17 +135,17 @@
                        <center>
                         <div class="abc scroll">
                         <table width="93%" class="sub-table scrolldown" border="0">
-                            <thead>
-                                <tr>
-                                    <th class="table-headin">Nom Patient</th>
-                                    <th class="table-headin">Nombre du rendez-vous</th>
-                                    <th class="table-headin">Médecin</th>
-                                    <th class="table-headin">Titre de la séance</th>
-                                    <th class="table-headin" style="font-size:10px">Date & Heure du Séance</th>
-                                    <th class="table-headin">Date du Rendez-vous</th>
-                                    <th class="table-headin">Actions</th>
-                                </tr>
-                            </thead>
+                        <thead>
+                            <tr>
+                                <th class="table-headin">Nom Patient</th>
+                                <th class="table-headin">Nombre du rendez-vous</th>
+                                <th class="table-headin">Médecin</th>
+                                <th class="table-headin">Titre de la séance</th>
+                                <th class="table-headin" style="font-size:10px">Date & Heure du Séance</th>
+                                <th class="table-headin">Date du Rendez-vous</th>
+                                <th class="table-headin">Actions</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <?php
                                 $result= $database->query($sqlmain);
@@ -199,7 +198,7 @@
                                                 <div style="display:flex;justify-content: center;">
                                                 <!--<a href="?action=view&id='.$appoid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
                                                &nbsp;&nbsp;&nbsp;-->
-                                                <a href="?action=drop&id='.$appoid.'&name='.$pname.'&session='.$title.'&apponum='.$apponum.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Annuler</font></button></a>
+                                                    <a href="?action=drop&id='.$appoid.'&name='.$pname.'&session='.$title.'&apponum='.$apponum.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Annuler</font></button></a>
                                            &nbsp;&nbsp;&nbsp;  </div>
                                             </td>
                                         </tr>';
@@ -240,8 +239,8 @@
                         </tr>
                         <tr>
                             <td class="label-td" colspan="2">
-                            <form action="add-session.php" method="POST" class="add-new-form">
-                            <label for="title" class="form-label">Titre de la Séance: </label>
+                                <form action="add-session.php" method="POST" class="add-new-form">
+                                <label for="title" class="form-label">Titre de la Séance: </label>
                             </td>
                         </tr>
                         <tr>

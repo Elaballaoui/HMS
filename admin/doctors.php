@@ -124,20 +124,20 @@
                                     $spcil_name=$spcil_array["sname"];
                                     echo '<tr>
                                         <td> &nbsp;'.
-                                        substr($name,0,30)
+                                            substr($name,0,30)
                                         .'</td>
                                         <td>
-                                        '.substr($email,0,20).'
+                                            '.substr($email,0,20).'
                                         </td>
                                         <td>
                                             '.substr($spcil_name,0,20).'
                                         </td>
                                         <td>
-                                        <div style="display:flex;justify-content: center;">
-                                        <a href="?action=edit&id='.$docid.'&error=0" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-edit"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Modifier</font></button></a>
-                                        <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Vue</font></button></a>
-                                        <a href="?action=drop&id='.$docid.'&name='.$name.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Supprimer</font></button></a>
-                                        </div>
+                                            <div style="display:flex;justify-content: center;">
+                                                <a href="?action=edit&id='.$docid.'&error=0" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-edit"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Modifier</font></button></a>
+                                                <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Vue</font></button></a>
+                                                <a href="?action=drop&id='.$docid.'&name='.$name.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Supprimer</font></button></a>
+                                            </div>
                                         </td>
                                     </tr>';
                                 }
@@ -166,8 +166,8 @@
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">Vous souhaitez supprimer cet enregistrement<br>('.substr($nameget,0,40).').</div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
-                        <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
+                            <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Oui&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                            <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;Non&nbsp;&nbsp;</font></button></a>
                         </div>
                     </center>
                 </div>
@@ -194,68 +194,68 @@
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">eHospital App<br></div>
                         <div style="display: flex;justify-content: center;">
-                        <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
-                            <tr>
-                                <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Voir les Détails.</p><br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Nom: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    '.$name.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="Email" class="form-label">Email: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$email.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">CIN: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$nic.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Téléphone: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$tele.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Spécialités: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$spcil_name.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a>
-                                </td>
-                            </tr>
-                        </table>
+                            <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
+                                <tr>
+                                    <td>
+                                        <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Voir les Détails.</p><br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        <label for="name" class="form-label">Nom: </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        '.$name.'<br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        <label for="Email" class="form-label">Email: </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        '.$email.'<br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        <label for="nic" class="form-label">CIN: </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        '.$nic.'<br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        <label for="Tele" class="form-label">Téléphone: </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        '.$tele.'<br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        <label for="spec" class="form-label">Spécialités: </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label-td" colspan="2">
+                                        '.$spcil_name.'<br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </center>
                     <br><br>
@@ -308,7 +308,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                        <input type="email" name="email" class="input-text" placeholder="Adresse E-mail" required><br>
+                                    <input type="email" name="email" class="input-text" placeholder="Adresse E-mail" required><br>
                                 </td>
                             </tr>
                             <tr>
@@ -444,8 +444,8 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                        <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Modifier les Détails du Médecin.</p>
-                                        ID Médecin : '.$id.' (Auto Généré)<br><br>
+                                            <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Modifier les Détails du Médecin.</p>
+                                            ID Médecin : '.$id.' (Auto Généré)<br><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -458,7 +458,7 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                        <input type="email" name="email" class="input-text" placeholder="Adresse Email" value="'.$email.'" required><br>
+                                            <input type="email" name="email" class="input-text" placeholder="Adresse Email" value="'.$email.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -519,7 +519,8 @@
                                         <td class="label-td" colspan="2">
                                             <input type="password" name="password" class="input-text" placeholder="Définir un Mot de Passe" required><br>
                                         </td>
-                                    </tr><tr>
+                                    </tr>
+                                    <tr>
                                         <td class="label-td" colspan="2">
                                             <label for="cpassword" class="form-label">Confirmez le Mot de Passe: </label>
                                         </td>
@@ -555,7 +556,7 @@
                             <a class="close" href="doctors.php">&times;</a>
                             <div class="content"></div>
                             <div style="display: flex;justify-content: center;">
-                            <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
+                                <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
                             </div>
                             <br><br>
                         </center>

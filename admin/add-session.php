@@ -23,4 +23,4 @@
 
         header("location: schedule.php?action=session-added&title=$title");
     }
-?>
+    ?>
