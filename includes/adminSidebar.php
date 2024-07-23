@@ -9,7 +9,7 @@
                         </td>
                         <td style="padding:0px;margin:0px;">
                             <p class="profile-title">Administrateur</p>
-                            <p class="profile-subtitle">admin@ehospital.com</p>
+                            <p class="profile-subtitle">admin@hms.com</p>
                         </td>
                     </tr>
                     <tr>
