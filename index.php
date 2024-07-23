@@ -10,7 +10,7 @@
     <table border="0">
         <tr>
             <td width="80%">
-                <font class="edoc-logo">eHospital.</font>
+                <font class="edoc-logo">HMS.</font>
             </td>
             <td width="10%">
                 <a href="login.php" class="non-style-link"><p class="nav-item">SE CONNECTER</p></a>

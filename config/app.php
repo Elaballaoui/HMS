@@ -1,19 +1,19 @@
 <?php
     $pageTitleList=[
-        'Accueil'=>'eHospital | Accueil',
-        'Connecter'=>'eHospital | Connecter',
-        'Inscrire'=>'eHospital | Inscrire',
-        'Tableau de bord'=>'eHospital | Tableau de bord',
-        'Tous les Médecins'=>'eHospital | Tous les Médecins',
-        'Séances Planifiées'=>'eHospital | Séances Planifiées',
-        'Mes réservations'=>'eHospital | Mes réservations',
-        'Paramètres'=>'eHospital | Paramètres',
-        'Réservation'=>'eHospital | Réservation',
-        'Mes Séances'=>'eHospital | Mes Séances',
-        'Mes Patients'=>'eHospital | Mes Patients',
-        'Les Médecins'=>'eHospital | Les Médecins',
-        'Calendrier'=>'eHospital | Calendrier',
-        'Patients'=>'eHospital | Patients'
+        'Accueil'=>'HMS | Accueil',
+        'Connecter'=>'HMS | Connecter',
+        'Inscrire'=>'HMS | Inscrire',
+        'Tableau de bord'=>'HMS | Tableau de bord',
+        'Tous les Médecins'=>'HMS | Tous les Médecins',
+        'Séances Planifiées'=>'HMS | Séances Planifiées',
+        'Mes réservations'=>'HMS | Mes réservations',
+        'Paramètres'=>'HMS | Paramètres',
+        'Réservation'=>'HMS | Réservation',
+        'Mes Séances'=>'HMS | Mes Séances',
+        'Mes Patients'=>'HMS | Mes Patients',
+        'Les Médecins'=>'HMS | Les Médecins',
+        'Calendrier'=>'HMS | Calendrier',
+        'Patients'=>'HMS | Patients'
     ];
     $cssLinkList=[
         'index'=>'assets/css/index.css',
