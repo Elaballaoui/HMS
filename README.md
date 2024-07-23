@@ -1,13 +1,13 @@
-## " ## eHospital PHP management system ## " 
+## " ## PHP hospital management system ## " 
 
 ## Admin account:
-email: admin@ehospital.com <br/>
-password: ehospital123
+email: admin@hms.com <br/>
+password: HMS123
 
 ## Doctor account:
-email: doctor@ehospital.com <br/>
-password: ehospital123
+email: doctor@hms.com <br/>
+password: HMS123
 
 ## Patient account:
-email: patient@ehospital.com <br/>
-password: ehospital123
+email: patient@hms.com <br/>
+password: HMS123

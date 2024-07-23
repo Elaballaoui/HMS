@@ -4,7 +4,7 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 --
--- Database: `eHospital`
+-- Database: `hms`
 --
 
 -- --------------------------------------------------------
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`aemail`, `apassword`) VALUES
-('admin@ehospital.com', 'ehospital123');
+('admin@hms.com ', 'HMS123');
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `doctor` (
 --
 
 INSERT INTO `doctor` (`docid`, `docemail`, `docname`, `docpassword`, `docnic`, `doctel`, `specialties`) VALUES
-(1, 'doctor@ehospital.com', 'Test Doctor', 'ehospital123', '000000000', '0110000000', 1);
+(1, 'doctor@hms.com', 'Test Doctor', 'HMS123', '000000000', '0110000000', 1);
 
 -- --------------------------------------------------------
 
@@ -102,8 +102,8 @@ CREATE TABLE IF NOT EXISTS `patient` (
 --
 
 INSERT INTO `patient` (`pid`, `pemail`, `pname`, `ppassword`, `paddress`, `pnic`, `pdob`, `ptel`) VALUES
-(1, 'patient@ehospital.com', 'Test Patient', 'ehospital123', 'Sri Lanka', '0000000000', '2000-01-01', '0120000000'),
-(2, 'emhashenudara@gmail.com', 'Hashen Udara', 'ehospital123', 'Sri Lanka', '0110000000', '2022-06-03', '0700000000');
+(1, 'patient@hms.com', 'Test Patient', 'HMS123', 'Sri Lanka', '0000000000', '2000-01-01', '0120000000'),
+(2, 'emhashenudara@gmail.com', 'Hashen Udara', 'HMS123', 'Sri Lanka', '0110000000', '2022-06-03', '0700000000');
 
 -- --------------------------------------------------------
 
@@ -230,8 +230,8 @@ CREATE TABLE IF NOT EXISTS `webuser` (
 --
 
 INSERT INTO `webuser` (`email`, `usertype`) VALUES
-('admin@ehospital.com', 'a'),
-('doctor@ehospital.com', 'd'),
-('patient@ehospital.com', 'p'),
+('admin@hms.com ', 'a'),
+('doctor@hms.com', 'd'),
+('patient@hms.com', 'p'),
 ('emhashenudara@gmail.com', 'p');
 COMMIT;
