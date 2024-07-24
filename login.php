@@ -62,7 +62,7 @@
                 }
             }
         }else{
-            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">We cant found any acount for this email.</label>';
+            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Nous avons trouvé aucun compte pour cet e-mail.</label>';
         }
     }else{
         $error='<label for="promter" class="form-label">&nbsp;</label>';
@@ -74,7 +74,7 @@
         <table border="0" style="margin: 0;padding: 0;width: 60%;">
             <tr>
                 <td>
-                    <p class="header-text">Bienvenue sur eHospital !</p>
+                    <p class="header-text">Bienvenue sur HMS !</p>
                 </td>
             </tr>
             <div class="form-body">
